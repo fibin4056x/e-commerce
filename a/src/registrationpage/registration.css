@@ -1,0 +1,63 @@
+
+
+.Login {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  position: relative;
+  top: 100px;
+}
+
+.Login label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.Login input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.Login input:focus {
+  border-color: #6090c3;
+  box-shadow: 2 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.Login button[type="submit"] {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.Login button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+.password {
+  position: relative;
+}
+
+.password button {
+  position: absolute;
+  right: 10px;
+  top: 35px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
