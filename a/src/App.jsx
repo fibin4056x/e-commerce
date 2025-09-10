@@ -8,6 +8,7 @@ import Men from './home/content/Men'
 import Women from './home/content/Women'
 import Cart from './home/content/Cart'
 import Home from './home/Home'
+import Details from './home/content/Details'
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
     <Route path='men' element={<Men/>}/>
      <Route path='women' element={<Women/>}/>
     <Route path='cart' element={<Cart/>}/>
-
+    <Route path='product/:id' element={<Details/>}/>
     </Route>
     <Route path='/login' element={<Login/>}/>
     <Route path='registration' element={<Registration/>}/>
