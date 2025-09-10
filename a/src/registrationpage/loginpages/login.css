@@ -80,3 +80,19 @@
 {
   background:#dbddde;
 }
+.back-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  margin-left: 10px;
+  background-color: #ccc;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #aaa;
+  color: #fff;
+}

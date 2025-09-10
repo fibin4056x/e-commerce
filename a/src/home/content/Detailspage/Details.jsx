@@ -1,11 +1,14 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams ,useNavigate } from "react-router-dom";
 import "./Details.css";
+import { Context } from "../../../registrationpage/loginpages/Logincontext";
+import { toast } from "react-toastify";
 
 function Details() {
   const [data, setData] = useState(null);
   const { id } = useParams();
+  const { addtocart, user } = useContext(Context);  
 
   useEffect(() => {
     axios
@@ -17,8 +20,16 @@ function Details() {
         console.log(err);
       });
   }, [id]);
- 
- 
+
+  const handlecart = () => {
+    if (!user) {
+      alert("Please login first");
+      return;
+    }
+    addtocart(data);
+toast.success(" your item added to cart")
+  };
+
   if (!data) {
     return <h2>Loading...</h2>;
   }
@@ -70,7 +81,9 @@ function Details() {
           ))}
         </div>
 
-        <button className="add-to-cart"  >Add to Cart 🛒</button>
+        <button className="add-to-cart" onClick={handlecart}>
+          Add to Cart 🛒
+        </button>
       </div>
     </div>
   );

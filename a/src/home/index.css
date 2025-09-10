@@ -1,23 +1,32 @@
-/* navbar.css */
 
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
   background-color: #222;
-  color: white;
+  padding: 12px 24px;
 }
+
 
 .nav-link {
-  margin-right: 20px;
+  margin: 0 10px;
   text-decoration: none;
-  color: white;
+  color: #ddd;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
+
 .nav-link:hover {
-  color: #00bfff;
+  color: #320efa;
 }
+
+
+.nav-link.active {
+  border-bottom: 1px solid #8e9192;
+  color: #a5b4aa;
+}
+
 
 .nav-right {
   margin-left: auto;
@@ -27,22 +36,26 @@
 }
 
 .nav-user {
-  font-size: 14px;
-  margin-right: 8px;
+  color: #fff;
+  font-weight: 600;
 }
 
+
 .logout-btn {
-  padding: 6px 12px;
-  background-color: #ff4444;
+  background-color: #e63946;
   border: none;
-  border-radius: 4px;
-  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
   cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
 .logout-btn:hover {
-  background-color: #cc0000;
+  background-color: #c1121f;
 }
+
 
 .page-content {
   padding: 20px;

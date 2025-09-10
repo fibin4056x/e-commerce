@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default function Registration() {
   const [username, setusername] = useState('');
@@ -13,13 +14,13 @@ export default function Registration() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("clicked from registration");
+
 
     if (username === '' || password === '') {
-      alert("please fill the columns");
+      toast.warning("please fill the columns");
       return;
     }
-    if (/^[a-zA-Z]{5,}$/.test(username) && /^\d{8}$/.test(password)) {
+    if (/^[a-zA-Z]{5,}$/.test(username) && /^\d{6}$/.test(password)) {
       try {
         const res = await axios.post('http://localhost:3000/user', {
           username,
@@ -31,14 +32,14 @@ export default function Registration() {
         setusername('');
         setpassword('');
 
-        alert("Registration successful! Please login.");
+        toast.warning("Registration successful! Please login.");
         navigate('/login');
       } catch (err) {
         console.error(err);
-        alert("Something went wrong while registering.");
+       toast.warning("Something went wrong while registering.");
       }
     } else {
-      alert("Username must be at least 5 letters and password must be exactly 8 numbers");
+      toast.warning("Username must be at least 5 letters and password must be exactly 8 numbers");
     }
   };
 
