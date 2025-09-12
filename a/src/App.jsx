@@ -11,7 +11,7 @@ import Details from "./home/content/Detailspage/Details";
 
 import { ToastContainer } from "react-toastify";  
 import "react-toastify/dist/ReactToastify.css";   
-import Order from "./home/content/orderpage/order";
+import Order from "./home/content/checkout/Checkout";
 
 function App() {
   return (

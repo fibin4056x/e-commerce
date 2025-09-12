@@ -1,19 +1,14 @@
 {
   "user": [
     {
-      "id": "497c",
+      "id": "7065",
       "username": "fibin",
-      "password": "12345678"
+      "password": "123456"
     },
     {
-      "id": "bf84",
-      "username": "fibin",
-      "password": "12345678"
-    },
-    {
-      "id": "b977",
+      "id": "176d",
       "username": "jazil",
-      "password": "12345678"
+      "password": "123456"
     }
   ],
   "products": [
@@ -620,6 +615,104 @@
   ],
   "cart": [
     {
+      "id": "19",
+      "name": "Men's Classic Sneakers",
+      "brand": "Reebok",
+      "category": "Women",
+      "type": "Casual",
+      "description": "High-quality eco-friendly shoes designed for comfort and durability.",
+      "price": 102.14,
+      "originalPrice": 104.13,
+      "sizes": [
+        7,
+        8,
+        9,
+        11,
+        5,
+        6
+      ],
+      "colors": [
+        "Blue",
+        "Black"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 66,
+      "rating": 3.6,
+      "reviews": 177,
+      "discount": 5,
+      "isFeatured": true,
+      "isNewArrival": false,
+      "userId": "176d",
+      "quantity": 1
+    },
+    {
+      "id": "14",
+      "name": "Women's Candy City Run",
+      "brand": "EcoStep",
+      "category": "Women",
+      "type": "Running",
+      "description": "Urban running shoes designed for city adventures with recycled materials.",
+      "price": 40,
+      "originalPrice": 54.9,
+      "sizes": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        "Pink",
+        "Purple"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 30,
+      "rating": 4.4,
+      "reviews": 92,
+      "discount": 27,
+      "isFeatured": true,
+      "isNewArrival": true,
+      "userId": "7065",
+      "quantity": 1
+    },
+    {
+      "id": "8",
+      "name": "Women's Cream Suede",
+      "brand": "EcoStep",
+      "category": "Women",
+      "type": "Casual",
+      "description": "Stylish sustainable suede shoes perfect for everyday wear.",
+      "price": 59.9,
+      "originalPrice": null,
+      "sizes": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "colors": [
+        "Cream",
+        "Tan"
+      ],
+      "images": [
+        "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
+      ],
+      "stock": 35,
+      "rating": 4.3,
+      "reviews": 68,
+      "discount": 0,
+      "isFeatured": true,
+      "isNewArrival": false,
+      "userId": "7065",
+      "quantity": 1
+    },
+    {
       "id": "7",
       "name": "Women's Orange Sneaker",
       "brand": "EcoStep",
@@ -647,39 +740,28 @@
       "discount": 0,
       "isFeatured": true,
       "isNewArrival": false,
-      "userId": "497c",
+      "userId": "7065",
       "quantity": 1
+    }
+  ],
+  "order": [
+    {
+      "id": "a071",
+      "contact": "4333333444",
+      "firstname": "fibin",
+      "lastname": "lastname",
+      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
+      "city": "malapuram",
+      "postalcode": "679339"
     },
     {
-      "id": "10",
-      "name": "Women's Tan Sneaker",
-      "brand": "EcoStep",
-      "category": "Women",
-      "type": "Sneakers",
-      "description": "Elegant sneakers made from high-quality recycled materials.",
-      "price": 80,
-      "originalPrice": 89.9,
-      "sizes": [
-        5,
-        6,
-        7,
-        8
-      ],
-      "colors": [
-        "Tan",
-        "Brown"
-      ],
-      "images": [
-        "https://i.pinimg.com/736x/c1/69/42/c16942cec4c038e52648ce4c45a2196f.jpg"
-      ],
-      "stock": 20,
-      "rating": 4.7,
-      "reviews": 310,
-      "discount": 11,
-      "isFeatured": false,
-      "isNewArrival": true,
-      "userId": "497c",
-      "quantity": 1
+      "id": "c700",
+      "contact": "7907238198",
+      "firstname": "fibin",
+      "lastname": "lastname",
+      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
+      "city": "malapuram",
+      "postalcode": "679339"
     }
   ]
 }
