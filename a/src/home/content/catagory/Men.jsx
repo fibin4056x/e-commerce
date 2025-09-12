@@ -17,6 +17,27 @@ export default function Men() {
   return (
     <div className="men-container">
       <h2 className="men-title">Men Products</h2>
+ <div>
+        <select name="sort" id="sort" className="sort-dropdown" onChange={(e)=>{
+          const sortBy=e.target.value;
+          let sortedData=[...filteredProducts]; 
+          if(sortBy==="lowtohigh"){
+            sortedData.sort((a,b)=>a.price-b.price)
+          } 
+
+          else if(sortBy==="hightolow"){
+            sortedData.sort((a,b)=>b.price-a.price)
+          }else{
+            sortedData=[...filteredProducts]
+          }
+          setFilteredProducts(sortedData)
+        }
+        }>
+          <option value="">Sort By Price</option>
+          <option value="lowtohigh">Low to High</option>    
+          <option value="hightolow">High to Low</option>
+        </select>
+        </div>
       {filteredProducts.length === 0 ? (
         <p className="no-products">No products</p>
       ) : (

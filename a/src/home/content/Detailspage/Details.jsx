@@ -4,12 +4,11 @@ import { useParams ,useNavigate } from "react-router-dom";
 import "./Details.css";
 import { Context } from "../../../registrationpage/loginpages/Logincontext";
 import { toast } from "react-toastify";
-
 function Details() {
   const [data, setData] = useState(null);
   const { id } = useParams();
-  const { addtocart, user } = useContext(Context);  
-
+  const { addtocart, user,cart } = useContext(Context);  
+const navigate=useNavigate()
   useEffect(() => {
     axios
       .get(`http://localhost:3000/products/${id}`)
@@ -33,7 +32,10 @@ toast.success(" your item added to cart")
   if (!data) {
     return <h2>Loading...</h2>;
   }
-
+  const handle=()=>{
+    navigate("/cart")
+  }
+  const inCart = cart?.some((item) => item.id === data.id);
   return (
     <div className="details">
       <div className="details-left">
@@ -80,10 +82,17 @@ toast.success(" your item added to cart")
             ></span>
           ))}
         </div>
+    {inCart ? (
+  <button className="add-to-cart" onClick={handle}>
+    Go to Cart 🛒
+  </button>
+) : (
+  <button className="add-to-cart" onClick={handlecart}>
+    Add to Cart 🛒
+  </button>
+)}
 
-        <button className="add-to-cart" onClick={handlecart}>
-          Add to Cart 🛒
-        </button>
+       
       </div>
     </div>
   );

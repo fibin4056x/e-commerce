@@ -3,8 +3,9 @@ import { Context } from "../../../registrationpage/loginpages/Logincontext";
 import "./cart.css";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import { Link, useParams } from "react-router-dom";
 export default function Cart() {
+
   const { cart, user, setcart } = useContext(Context);
 
   const increaseQuantity = async (item) => {
@@ -20,7 +21,7 @@ export default function Cart() {
 
   const decreaseQuantity = async (item) => {
     if (item.quantity <= 1) {
-      // Optional: remove item from cart if quantity reaches 0
+  
       try {
         await axios.delete(`http://localhost:3000/cart/${item.id}`);
         setcart(cart.filter((i) => i.id !== item.id));
@@ -40,6 +41,19 @@ export default function Cart() {
       toast.error("Failed to decrease quantity");
     }
   };
+  const removeItem = async (item) => {
+    try {
+      console.log("Removing item:", item);
+      
+      await axios.delete(`http://localhost:3000/cart/${item.id}`);
+      setcart(cart.filter((i) => i.id !== item.id));
+      toast.info(`${item.name} removed from cart`);
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to remove item");
+    }
+  };
+
 
   if (!user) return <h2>Please login to see your cart</h2>;
   if (!cart) return <h2>Loading cart...</h2>;
@@ -66,6 +80,8 @@ export default function Cart() {
                   <button onClick={() => decreaseQuantity(item)}>-</button>
                   <span>{item.quantity}</span>
                   <button onClick={() => increaseQuantity(item)}>+</button>
+                  <button className="remove" onClick={()=>removeItem(item)} >remove</button>
+                  <Link  key={item.id} to={`/order/${item.id}`}  className=" order">checkout</Link>
                 </div>
                 <p>Total Price: ${item.quantity * item.price}</p>
               </div>

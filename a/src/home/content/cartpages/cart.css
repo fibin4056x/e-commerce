@@ -31,3 +31,32 @@
   margin: 4px 0;
   font-size: 14px;
 }
+.order {
+  margin-left: 20px;
+  padding: 6px 12px;
+  background: #28a745;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.order:hover {
+  background: #1e7e34;
+}
+.remove {
+  margin-left: 20px;
+  padding: 6px 12px;
+  background: #dc3545;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.remove:hover {
+  background: #c82333;
+}

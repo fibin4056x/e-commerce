@@ -18,6 +18,7 @@ export default function Index() {
         <NavLink to="/" className="nav-link">Home</NavLink>
         <NavLink to="/men" className="nav-link">Men</NavLink>
         <NavLink to="/women" className="nav-link">Women</NavLink>
+        
         <NavLink to="/cart" className="nav-link">Cart</NavLink>
 
         <div className="nav-right">

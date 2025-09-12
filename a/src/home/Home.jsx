@@ -1,11 +1,14 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { Context } from "../registrationpage/loginpages/Logincontext";
 
 export default function Home() {
   const [data, setData] = useState([]);
 
+  
+const {user}=useContext(Context)
   useEffect(() => {
     axios.get("http://localhost:3000/products").then((res) => {
       setData(res.data); 
@@ -14,9 +17,37 @@ export default function Home() {
 
   return (
     <div className="home">
-      <h1 className="home-title">Welcome Home 🎉</h1>
+      <h1 className="home-title">Welcome Home {user?.username}</h1>
+     <img
+    src={"https://i.pinimg.com/736x/86/70/5e/86705e31d09fb8218a6fb9b4c3cc9bf6.jpg"}
+    alt="shoes"
+    className="home-banner"
+  />
       <p className="home-subtitle">Select Men, Women or Cart from the navbar.</p>
+        <div>
+          <div>
+            <input type="text"  />
+          </div>
+        <select name="sort" id="sort" className="sort-dropdown" onChange={(e)=>{
+          const sortBy=e.target.value;
+          let sortedData=[...data]; 
+          if(sortBy==="lowtohigh"){
+            sortedData.sort((a,b)=>a.price-b.price)
+          } 
 
+          else if(sortBy==="hightolow"){
+            sortedData.sort((a,b)=>b.price-a.price)
+          }else{
+            sortedData=[...data]
+          }
+          setData(sortedData)
+        }
+        }>
+          <option value="">Sort By Price</option>
+          <option value="lowtohigh">Low to High</option>    
+          <option value="hightolow">High to Low</option>
+        </select>
+        </div>
       <div className="product-grid">
         {data.map((item) => (
           <Link key={item.id} to={`/product/${item.id}`} className="product-card">

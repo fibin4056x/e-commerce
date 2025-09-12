@@ -39,7 +39,7 @@ export default function Registration() {
        toast.warning("Something went wrong while registering.");
       }
     } else {
-      toast.warning("Username must be at least 5 letters and password must be exactly 8 numbers");
+      toast.warning("Username must be at least 5 letters and password must be exactly 6 numbers");
     }
   };
 

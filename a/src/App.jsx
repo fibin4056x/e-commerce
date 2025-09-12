@@ -11,6 +11,7 @@ import Details from "./home/content/Detailspage/Details";
 
 import { ToastContainer } from "react-toastify";  
 import "react-toastify/dist/ReactToastify.css";   
+import Order from "./home/content/orderpage/order";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="women" element={<Women />} />
             <Route path="cart" element={<Cart />} />
             <Route path="product/:id" element={<Details />} />
+            <Route path="order/:id" element={<Order/>}/>
           </Route>
 
           <Route path="/login" element={<Login />} />

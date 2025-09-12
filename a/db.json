@@ -38,7 +38,7 @@
         "Blue"
       ],
       "images": [
-        "https://i.pinimg.com/736x/d3/05/eb/d305ebc1b6e74f3c7671e7165264d60e.jpg"
+        "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 50,
       "rating": 4.5,
@@ -69,7 +69,7 @@
         "Gray"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/1d/ee/23/1dee235a3ad7f51652dd704577e4d42f.jpg"
+        "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 40,
       "rating": 4.2,
@@ -100,7 +100,7 @@
         "Black"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/c4/37/cd/c437cde25b2bb037377e61fea2bda910.jpg"
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 25,
       "rating": 4,
@@ -129,7 +129,7 @@
         "Black"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/2b/6c/ed/2b6cedf854c8f2c286d6b0754ea75113.jpg"
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 30,
       "rating": 4.3,
@@ -159,7 +159,7 @@
         "Black"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/d7/93/ab/d793ab3b9a1e66c3e5200a0f2c4100a7.jpg"
+        "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 15,
       "rating": 4.8,
@@ -189,7 +189,7 @@
         "White"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/5b/c7/09/5bc709940c2c43ab0587c83558c28825.jpg"
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 60,
       "rating": 4.6,
@@ -218,7 +218,7 @@
         "Black"
       ],
       "images": [
-        " https://i.pinimg.com/1200x/e3/46/fc/e346fc8b60b52420d66e2e5866da7aa3.jpg"
+        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 45,
       "rating": 4.4,
@@ -248,7 +248,7 @@
         "Tan"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/6a/21/f9/6a21f9e052bfdbe8e7c066f817280662.jpg"
+        "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
       ],
       "stock": 35,
       "rating": 4.3,
@@ -259,7 +259,7 @@
     },
     {
       "id": "9",
-      "name": "Women's Pink Training ",
+      "name": "Women's Pink Training",
       "brand": "EcoStep",
       "category": "Women",
       "type": "Training",
@@ -278,7 +278,7 @@
         "Gray"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/10/46/84/10468413faa96a2a48674e5c1433ccd8.jpg"
+        "https://i.pinimg.com/1200x/27/26/0e/27260e73e5ba8e903fb9763573a922e1.jpg"
       ],
       "stock": 50,
       "rating": 4.1,
@@ -307,7 +307,7 @@
         "Brown"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/c1/69/42/c16942cec4c038e52648ce4c45a2196f.jpg"
+        "https://i.pinimg.com/736x/c1/69/42/c16942cec4c038e52648ce4c45a2196f.jpg"
       ],
       "stock": 20,
       "rating": 4.7,
@@ -338,7 +338,7 @@
         "White"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/fb/1d/b6/fb1db628466bdc736aff7950647a96ed.jpg"
+        "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 80,
       "rating": 4.5,
@@ -369,7 +369,7 @@
         "Orange"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/03/dc/a0/03dca0fad962cd090fe3efd7a659d124.jpg"
+        "https://images.unsplash.com/photo-1552066344-2464c1135c32?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 100,
       "rating": 4.2,
@@ -399,7 +399,7 @@
         "Navy"
       ],
       "images": [
-        "https://i.pinimg.com/736x/78/00/2e/78002e6c003b6667fe48b02bd91b997c.jpg"
+        "https://i.pinimg.com/736x/7a/c6/61/7ac661694dd64d272c96c4f374f3328d.jpg"
       ],
       "stock": 45,
       "rating": 4.3,
@@ -430,13 +430,191 @@
         "Purple"
       ],
       "images": [
-        "https://i.pinimg.com/736x/b7/ca/9c/b7ca9c1253ce47fa6bded0d31d3cedb3.jpg"
+        "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 30,
       "rating": 4.4,
       "reviews": 92,
       "discount": 27,
       "isFeatured": true,
+      "isNewArrival": true
+    },
+    {
+      "id": "15",
+      "name": "Women's Comfort Sneakers",
+      "brand": "Adidas",
+      "category": "Men",
+      "type": "Training",
+      "description": "High-quality eco-friendly shoes designed for comfort and durability.",
+      "price": 105.99,
+      "originalPrice": 130.26,
+      "sizes": [
+        10,
+        5,
+        11,
+        12,
+        9
+      ],
+      "colors": [
+        "Red",
+        "Black"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 10,
+      "rating": 3.7,
+      "reviews": 270,
+      "discount": 12,
+      "isFeatured": false,
+      "isNewArrival": true
+    },
+    {
+      "id": "16",
+      "name": "Women's Comfort Sneakers",
+      "brand": "Puma",
+      "category": "Women",
+      "type": "Training",
+      "description": "High-quality eco-friendly shoes designed for comfort and durability.",
+      "price": 62.43,
+      "originalPrice": 83.29,
+      "sizes": [
+        9,
+        7,
+        12,
+        5,
+        6,
+        11
+      ],
+      "colors": [
+        "Red",
+        "Green"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 54,
+      "rating": 4.4,
+      "reviews": 296,
+      "discount": 5,
+      "isFeatured": false,
+      "isNewArrival": false
+    },
+    {
+      "id": "17",
+      "name": "Men's Classic Training",
+      "brand": "Reebok",
+      "category": "Men",
+      "type": "Casual",
+      "description": "High-quality eco-friendly shoes designed for comfort and durability.",
+      "price": 110,
+      "originalPrice": 97.59,
+      "sizes": [
+        12,
+        10,
+        9,
+        11
+      ],
+      "colors": [
+        "Gray",
+        "Blue"
+      ],
+      "images": [
+        "https://i.pinimg.com/1200x/59/b7/e5/59b7e5c3afa07637b6bf4ab0495dd9d4.jpg"
+      ],
+      "stock": 71,
+      "rating": 4.9,
+      "reviews": 341,
+      "discount": 0,
+      "isFeatured": false,
+      "isNewArrival": true
+    },
+    {
+      "id": "18",
+      "name": "Women's Sport Running",
+      "brand": "Puma",
+      "category": "Women",
+      "type": "Sneakers",
+      "description": "High-quality eco-friendly shoes designed for comfort and durability.",
+      "price": 75.06,
+      "originalPrice": 125.51,
+      "sizes": [
+        11,
+        12,
+        10
+      ],
+      "colors": [
+        "Black",
+        "Green"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 96,
+      "rating": 4.6,
+      "reviews": 30,
+      "discount": 5,
+      "isFeatured": true,
+      "isNewArrival": false
+    },
+    {
+      "id": "19",
+      "name": "Men's Classic Sneakers",
+      "brand": "Reebok",
+      "category": "Women",
+      "type": "Casual",
+      "description": "High-quality eco-friendly shoes designed for comfort and durability.",
+      "price": 102.14,
+      "originalPrice": 104.13,
+      "sizes": [
+        7,
+        8,
+        9,
+        11,
+        5,
+        6
+      ],
+      "colors": [
+        "Blue",
+        "Black"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 66,
+      "rating": 3.6,
+      "reviews": 177,
+      "discount": 5,
+      "isFeatured": true,
+      "isNewArrival": false
+    },
+    {
+      "id": "20",
+      "name": "Women's Sport Sneakers",
+      "brand": "Puma",
+      "category": "Men",
+      "type": "Casual",
+      "description": "High-quality eco-friendly shoes designed for comfort and durability.",
+      "price": 91.84,
+      "originalPrice": 96.46,
+      "sizes": [
+        6,
+        5,
+        7,
+        12
+      ],
+      "colors": [
+        "Pink",
+        "Black"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1465453869711-7e174808ace9?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 53,
+      "rating": 4.9,
+      "reviews": 246,
+      "discount": 12,
+      "isFeatured": false,
       "isNewArrival": true
     }
   ],
@@ -461,7 +639,7 @@
         "Black"
       ],
       "images": [
-        " https://i.pinimg.com/1200x/e3/46/fc/e346fc8b60b52420d66e2e5866da7aa3.jpg"
+        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=400&fit=crop&auto=format"
       ],
       "stock": 45,
       "rating": 4.4,
@@ -470,137 +648,38 @@
       "isFeatured": true,
       "isNewArrival": false,
       "userId": "497c",
-      "quantity": 13
-    },
-    {
-      "id": "2",
-      "name": "Men's Earth-Tone Sneaker",
-      "brand": "EcoStep",
-      "category": "Men",
-      "type": "Sneakers",
-      "description": "Everyday sustainable sneakers with cushioned sole made from recycled foam.",
-      "price": 74.9,
-      "originalPrice": null,
-      "sizes": [
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
-      "colors": [
-        "Earth-Tone",
-        "Gray"
-      ],
-      "images": [
-        "https://i.pinimg.com/1200x/1d/ee/23/1dee235a3ad7f51652dd704577e4d42f.jpg"
-      ],
-      "stock": 40,
-      "rating": 4.2,
-      "reviews": 95,
-      "discount": 0,
-      "isFeatured": false,
-      "isNewArrival": true,
-      "userId": "b977",
-      "quantity": 2
-    },
-    {
-      "id": "1",
-      "name": "Men's Black Running",
-      "brand": "EcoStep",
-      "category": "Men",
-      "type": "Running",
-      "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
-      "price": 89.9,
-      "originalPrice": 104.9,
-      "sizes": [
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
-      "colors": [
-        "Black",
-        "Blue"
-      ],
-      "images": [
-        "https://i.pinimg.com/736x/d3/05/eb/d305ebc1b6e74f3c7671e7165264d60e.jpg"
-      ],
-      "stock": 50,
-      "rating": 4.5,
-      "reviews": 132,
-      "discount": 15,
-      "isFeatured": true,
-      "isNewArrival": false,
-      "userId": "497c",
       "quantity": 1
     },
     {
-      "id": "2",
-      "name": "Men's Earth-Tone Sneaker",
-      "brand": "EcoStep",
-      "category": "Men",
-      "type": "Sneakers",
-      "description": "Everyday sustainable sneakers with cushioned sole made from recycled foam.",
-      "price": 74.9,
-      "originalPrice": null,
-      "sizes": [
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
-      "colors": [
-        "Earth-Tone",
-        "Gray"
-      ],
-      "images": [
-        "https://i.pinimg.com/1200x/1d/ee/23/1dee235a3ad7f51652dd704577e4d42f.jpg"
-      ],
-      "stock": 40,
-      "rating": 4.2,
-      "reviews": 95,
-      "discount": 0,
-      "isFeatured": false,
-      "isNewArrival": true,
-      "userId": "b977",
-      "quantity": 1
-    },
-    {
-      "id": "9",
-      "name": "Women's Pink Training ",
+      "id": "10",
+      "name": "Women's Tan Sneaker",
       "brand": "EcoStep",
       "category": "Women",
-      "type": "Training",
-      "description": "Training shoes with extra comfort sole made from algae foam.",
-      "price": 54.9,
-      "originalPrice": 64.9,
+      "type": "Sneakers",
+      "description": "Elegant sneakers made from high-quality recycled materials.",
+      "price": 80,
+      "originalPrice": 89.9,
       "sizes": [
         5,
         6,
         7,
-        8,
-        9
+        8
       ],
       "colors": [
-        "Pink",
-        "Gray"
+        "Tan",
+        "Brown"
       ],
       "images": [
-        "https://i.pinimg.com/1200x/10/46/84/10468413faa96a2a48674e5c1433ccd8.jpg"
+        "https://i.pinimg.com/736x/c1/69/42/c16942cec4c038e52648ce4c45a2196f.jpg"
       ],
-      "stock": 50,
-      "rating": 4.1,
-      "reviews": 120,
-      "discount": 15,
-      "isFeatured": true,
-      "isNewArrival": false,
+      "stock": 20,
+      "rating": 4.7,
+      "reviews": 310,
+      "discount": 11,
+      "isFeatured": false,
+      "isNewArrival": true,
       "userId": "497c",
-      "quantity": 2
+      "quantity": 1
     }
   ]
 }

@@ -62,3 +62,24 @@
   font-weight: bold;
   color: #e63946;
 }
+
+.home-banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.sort-dropdown {
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.sort-dropdown:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
