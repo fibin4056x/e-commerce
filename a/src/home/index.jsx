@@ -2,10 +2,12 @@ import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../registrationpage/loginpages/Logincontext";
 import "./index.css";
-import {LogIn,LogOut} from "lucide-react"
+import { LogIn, LogOut, LucideListOrdered, ShoppingCart } from "lucide-react";
+
 export default function Index() {
-  const { user, logout } = useContext(Context);
+  const { user, logout, cart } = useContext(Context);
   const navigate = useNavigate();
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const handleLogout = () => {
     logout();
@@ -19,11 +21,21 @@ export default function Index() {
         <NavLink to="/men" className="nav-link">Men</NavLink>
         <NavLink to="/women" className="nav-link">Women</NavLink>
         
-        <NavLink to="/cart" className="nav-link">Cart</NavLink>
+        <NavLink to="/cart" className="nav-link cart-link">
+          <div style={{ position: "relative", display: "inline-block" }}>
+            <ShoppingCart size={24} />
+            {cartCount > 0 && (
+              <span className="cart-badge">{cartCount}</span>
+            )}
+          </div>
+        </NavLink>
+
+        <NavLink to="/order" className="nav-link">
+          <LucideListOrdered size={18} />
+        </NavLink>
 
         <div className="nav-right">
           {user && user.username ? (
-     
             <>
               <span className="nav-user">Hi, {user.username}</span>
               <button className="logout-btn" onClick={handleLogout}>
@@ -32,12 +44,9 @@ export default function Index() {
               </button>
             </>
           ) : (
-
             <Link to="/login" className="nav-link">
-                 
-        <LogIn size={18} style={{ marginRight: "5px" }} />
-        Login
- 
+              <LogIn size={18} style={{ marginRight: "5px" }} />
+              Login
             </Link>
           )}
         </div>

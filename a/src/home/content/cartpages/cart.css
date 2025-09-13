@@ -60,3 +60,18 @@
 .remove:hover {
   background: #c82333;
 }
+.checkout-container {
+  text-align: right;
+  margin-top: 20px;
+} 
+.checkout-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+}

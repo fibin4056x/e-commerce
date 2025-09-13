@@ -1,26 +1,27 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "./checkout.css";
 import { useContext } from "react";
 import { Context } from "../../../registrationpage/loginpages/Logincontext";
-
+import  {useNavigate} from "react-router-dom"
 export default function Checkout() {
   const { cart } = useContext(Context);
-
+const navigate=useNavigate()
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset
   } = useForm();
-
+  ;
 
   const total = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+
 
   const onSubmit = async (data) => {
     try {
@@ -29,15 +30,23 @@ export default function Checkout() {
         items: cart,
         total
       };
-
+      
       const response = await axios.post(
         "http://localhost:3000/order",
         orderData
-      );
-
+      );   
+       for (const item of cart) {
+      await axios.delete(`http://localhost:3000/cart/${item.id}`);
+    }
+    setTimeout(()=>{
+      window.location.href="/"
+    },1000)
+   
       console.log(response.data);
       toast.success("Order placed successfully");
+  
       reset();
+        navigate("/")
     } catch (error) {
       console.error(error);
       toast.error("Something went wrong");
@@ -143,7 +152,7 @@ export default function Checkout() {
           <p className="checkout-error">{errors.postalcode.message}</p>
         )}
 
-        <button className="checkout-button" type="submit">
+        <button className="checkout-button" type="submit" >
           Place Order
         </button>
       </form>
