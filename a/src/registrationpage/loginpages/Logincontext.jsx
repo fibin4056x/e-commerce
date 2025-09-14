@@ -7,25 +7,20 @@ function Logincontext({ children }) {
   const [user, setuser] = useState(null)
   const [cart, setcart] = useState([])
 
-  useEffect(() => {
-    axios.get('http://localhost:3000/user')
-      .then((r) => {
-        if (Array.isArray(r.data) && r.data.length > 0) {
-          setuser(r.data[0])  
-        } else {
-          setuser(null)
-        }
-      })
-      .catch(() => setuser(null))
-  }, [])
 
+useEffect(() => {
+  const storedUser = localStorage.getItem("user");
+  if (storedUser) {
+    setuser(JSON.parse(storedUser));
+  }
+}, []);
   useEffect(() => {
     if (user) {
       axios.get(`http://localhost:3000/cart?userId=${user.id}`)
         .then((res) => setcart(res.data))
         .catch(() => setcart([]))
     }
-  }, [user])
+  }, [])
 
   const addtocart = async (product) => {
     if (!user) {
@@ -63,7 +58,8 @@ function Logincontext({ children }) {
 
   const logout = () => {
     setuser(null)
-    setcart([])
+    setcart([]);
+    localStorage.removeItem("user");
   }
 
   return (

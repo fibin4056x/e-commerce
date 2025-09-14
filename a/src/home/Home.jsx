@@ -2,7 +2,8 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import { Context } from "../registrationpage/loginpages/Logincontext";
+ import { Context as Logincontext } from "../registrationpage/loginpages/Logincontext";
+ import { WishlistContext } from "../registrationpage/wishlisht/wishlistcontext";
 import { Search } from "lucide-react";
 
 export default function Home() {
@@ -10,20 +11,27 @@ export default function Home() {
   const [filtered, setFiltered] = useState([]);
   const [searchterm, setSearchTerm] = useState("");
 
-  const { user } = useContext(Context);
+  const { user } = useContext(Logincontext);
+  const { wishlist, addToWishlist, removeFromWishlist, fetchWishlist } = useContext(WishlistContext);
 
   useEffect(() => {
     axios.get("http://localhost:3000/products").then((res) => {
       setData(res.data);
-      setFiltered(res.data); 
+      setFiltered(res.data);
     });
   }, []);
-  useEffect(()=>{
-    handleSearch()
-  },[searchterm])
+
+  useEffect(() => {
+    handleSearch();
+  }, [searchterm]);
+
+  useEffect(() => {
+    if (user) {
+      fetchWishlist(); 
+    }
+  }, [user]);
 
   const handleSearch = () => {
-
     if (searchterm.trim() === "") {
       setFiltered(data);
     } else {
@@ -34,7 +42,6 @@ export default function Home() {
     }
   };
 
-
   const handleSort = (e) => {
     const sortBy = e.target.value;
     let sortedData = [...filtered];
@@ -44,11 +51,30 @@ export default function Home() {
     } else if (sortBy === "hightolow") {
       sortedData.sort((a, b) => b.price - a.price);
     } else {
-      sortedData = [...data]; 
+      sortedData = [...data];
     }
 
     setFiltered(sortedData);
   };
+
+  const toggleWishlist = (product) => {
+    if (!user) {
+      alert("Please login to add item to wishlist");
+      return;
+    }
+
+    const exists = wishlist.some((item) => item.id === product.id);
+    if (exists) {
+      // Remove from wishlist
+      const itemInWishlist = wishlist.find((w) => w.id === product.id);
+      removeFromWishlist(itemInWishlist.id);
+    } else {
+      // Add to wishlist
+      addToWishlist(product);
+    }
+  };
+
+  const isInWishlist = (product) => wishlist.some((item) => item.id === product.id);
 
   return (
     <div className="home">
@@ -85,12 +111,21 @@ export default function Home() {
       <div className="product-grid">
         {filtered.length > 0 ? (
           filtered.map((item) => (
-            <Link key={item.id} to={`/product/${item.id}`} className="product-card">
-              <img src={item.images[0]} alt={item.name} className="product-image" />
-              <h3 className="product-name">{item.name}</h3>
-              <p className="product-brand">{item.brand}</p>
-              <p className="product-price">${item.price}</p>
-            </Link>
+            <div key={item.id} className="product-card">
+              <button
+                className={`wishlist-button ${isInWishlist(item) ? "active" : ""}`}
+                onClick={() => toggleWishlist(item)}
+              >
+                {isInWishlist(item) ? "♥" : "♡"}
+              </button>
+
+              <Link to={`/product/${item.id}`} className="product-card-link">
+                <img src={item.images[0]} alt={item.name} className="product-image" />
+                <h3 className="product-name">{item.name}</h3>
+                <p className="product-brand">{item.brand}</p>
+                <p className="product-price">${item.price}</p>
+              </Link>
+            </div>
           ))
         ) : (
           <p className="no-products">No products found</p>

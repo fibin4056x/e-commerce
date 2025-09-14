@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { Context } from "../../../registrationpage/loginpages/Logincontext";
 import  {useNavigate} from "react-router-dom"
 export default function Checkout() {
-  const { cart } = useContext(Context);
+  const { cart ,user} = useContext(Context);
 const navigate=useNavigate()
   const {
     register,
@@ -27,6 +27,7 @@ const navigate=useNavigate()
     try {
       const orderData = {
         ...data,
+        userId: user.id,
         items: cart,
         total
       };
@@ -38,9 +39,7 @@ const navigate=useNavigate()
        for (const item of cart) {
       await axios.delete(`http://localhost:3000/cart/${item.id}`);
     }
-    setTimeout(()=>{
-      window.location.href="/"
-    },1000)
+    
    
       console.log(response.data);
       toast.success("Order placed successfully");

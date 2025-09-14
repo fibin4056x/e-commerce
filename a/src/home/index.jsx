@@ -2,16 +2,25 @@ import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../registrationpage/loginpages/Logincontext";
 import "./index.css";
-import { LogIn, LogOut, LucideListOrdered, ShoppingCart } from "lucide-react";
+import { LogIn, LogOut, LucideListOrdered, ShoppingCart,Heart } from "lucide-react";
+
+import { OrderContext } from "./content/orderpage/ordercontext";
 
 export default function Index() {
   const { user, logout, cart } = useContext(Context);
+  const { Order } = useContext(OrderContext);
   const navigate = useNavigate();
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const handleLogout = () => {
+const conform=window.confirm("Are you sure you want to logout?")
+if(!conform){
+  return
+} 
+
     logout();
     navigate("/login");
+
   };
 
   return (
@@ -30,8 +39,12 @@ export default function Index() {
           </div>
         </NavLink>
 
-        <NavLink to="/order" className="nav-link">
+        <NavLink to="/order" className="nav-link" >
           <LucideListOrdered size={18} />
+          
+        </NavLink>
+        <NavLink to="/wishlist" className="nav-link" >
+          <Heart size={18} />
         </NavLink>
 
         <div className="nav-right">

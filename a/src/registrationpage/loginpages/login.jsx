@@ -27,12 +27,14 @@ export default function Login() {
       });
 
       if (res.data.length > 0) {
-        setuser(res.data[0]);
+  
+        localStorage.setItem("user", JSON.stringify(res.data[0]));
         setusername("");
         setpassword("");
 
         toast.success("Login successful!");
         navigate("/");
+        window.location.reload();
       } else {
         toast.error("Invalid username or password. Please register.");
       }
