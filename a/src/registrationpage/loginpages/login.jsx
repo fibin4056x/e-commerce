@@ -72,7 +72,9 @@ export default function Login() {
           >
             {show ? <Eye size={14} /> : <EyeOff size={14} />}
           </button>
+         
         </label>
+        
 
         <div className="submit">
           <button type="submit">Login</button>

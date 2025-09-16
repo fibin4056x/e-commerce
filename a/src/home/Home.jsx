@@ -65,11 +65,11 @@ export default function Home() {
 
     const exists = wishlist.some((item) => item.id === product.id);
     if (exists) {
-      // Remove from wishlist
+
       const itemInWishlist = wishlist.find((w) => w.id === product.id);
       removeFromWishlist(itemInWishlist.id);
     } else {
-      // Add to wishlist
+    
       addToWishlist(product);
     }
   };

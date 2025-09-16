@@ -19,6 +19,11 @@
       "id": "cc40",
       "username": "athithyan",
       "password": "123456"
+    },
+    {
+      "id": "38cc",
+      "username": "athithyan",
+      "password": "123456"
     }
   ],
   "products": [
@@ -670,71 +675,249 @@
         }
       ],
       "total": 102.14
+    },
+    {
+      "id": "213a",
+      "contact": "7907238198",
+      "firstname": "fibin",
+      "lastname": "p",
+      "address": "manjeri",
+      "city": "malapuram",
+      "postalcode": "679339",
+      "userId": "860f",
+      "items": [
+        {
+          "id": "5",
+          "name": "Men's Red Running",
+          "brand": "EcoStep",
+          "category": "Men",
+          "type": "Running",
+          "description": "Premium running shoes made from upcycled materials for urban athletes.",
+          "price": 69.9,
+          "originalPrice": 79.9,
+          "sizes": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "colors": [
+            "Red",
+            "Black"
+          ],
+          "images": [
+            "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=400&fit=crop&auto=format"
+          ],
+          "stock": 15,
+          "rating": 4.8,
+          "reviews": 220,
+          "discount": 12,
+          "isFeatured": true,
+          "isNewArrival": false,
+          "userId": "860f",
+          "quantity": 1
+        }
+      ],
+      "total": 69.9
+    },
+    {
+      "id": "5557",
+      "contact": "7907238198",
+      "firstname": "jazil",
+      "lastname": "lastname",
+      "address": "manjeri",
+      "city": "malapuram",
+      "postalcode": "679339",
+      "userId": "cc40",
+      "items": [
+        {
+          "id": "8",
+          "name": "Women's Cream Suede",
+          "brand": "EcoStep",
+          "category": "Women",
+          "type": "Casual",
+          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
+          "price": 59.9,
+          "originalPrice": null,
+          "sizes": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "colors": [
+            "Cream",
+            "Tan"
+          ],
+          "images": [
+            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
+          ],
+          "stock": 35,
+          "rating": 4.3,
+          "reviews": 68,
+          "discount": 0,
+          "isFeatured": true,
+          "isNewArrival": false,
+          "userId": "cc40",
+          "quantity": 1
+        }
+      ],
+      "total": 59.9
+    },
+    {
+      "id": "ce3f",
+      "contact": "7907238198",
+      "firstname": "fibin",
+      "lastname": "lastname",
+      "address": "manjeri",
+      "city": "malapuram",
+      "postalcode": "541111",
+      "userId": "cc40",
+      "items": [
+        {
+          "id": "8",
+          "name": "Women's Cream Suede",
+          "brand": "EcoStep",
+          "category": "Women",
+          "type": "Casual",
+          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
+          "price": 59.9,
+          "originalPrice": null,
+          "sizes": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "colors": [
+            "Cream",
+            "Tan"
+          ],
+          "images": [
+            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
+          ],
+          "stock": 35,
+          "rating": 4.3,
+          "reviews": 68,
+          "discount": 0,
+          "isFeatured": true,
+          "isNewArrival": false,
+          "userId": "cc40",
+          "quantity": 1
+        }
+      ],
+      "total": 59.9
+    },
+    {
+      "id": "6986",
+      "contact": "7907238198",
+      "firstname": "fibin",
+      "lastname": "lastname",
+      "address": "g",
+      "city": "malapuram",
+      "postalcode": "583454",
+      "userId": "52fe",
+      "items": [
+        {
+          "id": "8",
+          "name": "Women's Cream Suede",
+          "brand": "EcoStep",
+          "category": "Women",
+          "type": "Casual",
+          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
+          "price": 59.9,
+          "originalPrice": null,
+          "sizes": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "colors": [
+            "Cream",
+            "Tan"
+          ],
+          "images": [
+            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
+          ],
+          "stock": 35,
+          "rating": 4.3,
+          "reviews": 68,
+          "discount": 0,
+          "isFeatured": true,
+          "isNewArrival": false,
+          "userId": "52fe",
+          "quantity": 1
+        }
+      ],
+      "total": 59.9
     }
   ],
   "wishlist": [
     {
-      "id": "1",
-      "name": "Men's Black Running",
+      "id": "4",
+      "name": "Men's Green Running",
       "brand": "EcoStep",
       "category": "Men",
       "type": "Running",
-      "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
+      "description": "High-performance running shoes with extra ankle support and sustainable materials.",
       "price": 89.9,
       "originalPrice": 104.9,
       "sizes": [
         7,
         8,
         9,
-        10,
-        11
+        10
       ],
       "colors": [
-        "Black",
-        "Blue"
+        "Green",
+        "Black"
       ],
       "images": [
-        "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop&auto=format"
       ],
-      "stock": 50,
-      "rating": 4.5,
-      "reviews": 132,
+      "stock": 30,
+      "rating": 4.3,
+      "reviews": 76,
       "discount": 15,
       "isFeatured": true,
-      "isNewArrival": false,
-      "userId": "860f"
+      "isNewArrival": true,
+      "userId": "cc40"
     },
     {
-      "id": "2",
-      "name": "Men's Earth-Tone Sneaker",
+      "id": "5",
+      "name": "Men's Red Running",
       "brand": "EcoStep",
       "category": "Men",
-      "type": "Sneakers",
-      "description": "Everyday sustainable sneakers with cushioned sole made from recycled foam.",
-      "price": 74.9,
-      "originalPrice": null,
+      "type": "Running",
+      "description": "Premium running shoes made from upcycled materials for urban athletes.",
+      "price": 69.9,
+      "originalPrice": 79.9,
       "sizes": [
-        6,
-        7,
         8,
         9,
         10,
-        11
+        11,
+        12
       ],
       "colors": [
-        "Earth-Tone",
-        "Gray"
+        "Red",
+        "Black"
       ],
       "images": [
-        "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=400&fit=crop&auto=format"
+        "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=400&fit=crop&auto=format"
       ],
-      "stock": 40,
-      "rating": 4.2,
-      "reviews": 95,
-      "discount": 0,
-      "isFeatured": false,
-      "isNewArrival": true,
-      "userId": "860f"
+      "stock": 15,
+      "rating": 4.8,
+      "reviews": 220,
+      "discount": 12,
+      "isFeatured": true,
+      "isNewArrival": false,
+      "userId": "cc40"
     },
     {
       "id": "3",
@@ -766,7 +949,7 @@
       "discount": 0,
       "isFeatured": false,
       "isNewArrival": true,
-      "userId": "860f"
+      "userId": "52fe"
     }
   ]
 }

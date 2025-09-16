@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Trash2 } from "lucide-react";
 import { WishlistContext } from "./wishlistcontext";
-import { Link } from "react-router-dom"; // ✅ import Link
+import { Link } from "react-router-dom"; 
 import "./wishlist.css";
 
 function Wishlist() {
@@ -19,7 +19,7 @@ function Wishlist() {
     <div className="wishlist-container">
       {wishlist.map((item) => (
         <div key={item.id} className="wishlist-card">
-          {/* ✅ Wrap image & title inside Link */}
+ 
           <Link to={`/product/${item.id}`} className="wishlist-link">
             <img
               src={item.images}

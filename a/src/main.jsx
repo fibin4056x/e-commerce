@@ -4,8 +4,10 @@ import WishlistProvider from './registrationpage/wishlisht/wishlistcontext.jsx'
 import App from './App.jsx'
 import Logincontext from './registrationpage/loginpages/Logincontext.jsx'
 import OrderProvider from './home/content/orderpage/ordercontext.jsx' 
+// 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+   
     <Logincontext>
       <WishlistProvider>
       <OrderProvider>
@@ -13,5 +15,6 @@ createRoot(document.getElementById('root')).render(
       </OrderProvider>
     </WishlistProvider> 
     </Logincontext>
+    {/* </AdminProvider> */}
   </StrictMode>,
 )

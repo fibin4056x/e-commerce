@@ -90,6 +90,74 @@
   color: #333;
 }
 
+
+
+@media (max-width: 992px) {
+  .men-title {
+    font-size: 1.6rem;
+  }
+
+  .men-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+
+  .product-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .men-container {
+    padding: 10px;
+  }
+
+  .men-title {
+    font-size: 1.4rem;
+  }
+
+  .men-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-image {
+    height: 150px;
+  }
+
+  .product-name {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 0.95rem;
+  }
+
+  .sort-dropdown {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .men-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .men-title {
+    font-size: 1.2rem;
+  }
+
+  .product-image {
+    height: 140px;
+  }
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

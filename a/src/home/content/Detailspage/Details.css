@@ -2,10 +2,14 @@
   display: flex;
   gap: 2rem;
   padding: 2rem;
+  flex-wrap: wrap; 
 }
 
 .details-left {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .details-image {
@@ -18,6 +22,7 @@
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .details-thumb {
@@ -27,10 +32,19 @@
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid #ccc;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.details-thumb:hover {
+  transform: scale(1.05);
+  border-color: #2a9d8f;
 }
 
 .details-right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .details-title {
@@ -41,21 +55,26 @@
 .details-brand {
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #555;
 }
 
 .details-price {
   font-size: 1.5rem;
   font-weight: bold;
   color: #2a9d8f;
+  margin-bottom: 0.5rem;
 }
 
 .details-discount {
   color: red;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .details-description {
   margin: 1rem 0;
+  color: #444;
+  line-height: 1.5;
 }
 
 .details-sizes {
@@ -69,6 +88,13 @@
   border-radius: 6px;
   background: #f8f8f8;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-btn:hover {
+  background: #2a9d8f;
+  color: white;
+  border-color: #2a9d8f;
 }
 
 .details-colors {
@@ -83,6 +109,13 @@
   border-radius: 50%;
   border: 1px solid #aaa;
   display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+  border-color: #2a9d8f;
 }
 
 .add-to-cart {
@@ -93,4 +126,56 @@
   border-radius: 8px;
   cursor: pointer;
   margin-top: 1rem;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: #21867a;
+}
+
+@media (max-width: 992px) {
+  .details {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .details-left,
+  .details-right {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .details-title {
+    font-size: 1.7rem;
+  }
+
+  .details-price {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .details {
+    padding: 1rem;
+  }
+
+  .details-title {
+    font-size: 1.4rem;
+  }
+
+  .details-price {
+    font-size: 1.2rem;
+  }
+
+  .details-thumb {
+    width: 50px;
+    height: 50px;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    text-align: center;
+  }
 }

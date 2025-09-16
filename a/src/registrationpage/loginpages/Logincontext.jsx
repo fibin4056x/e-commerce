@@ -20,7 +20,7 @@ useEffect(() => {
         .then((res) => setcart(res.data))
         .catch(() => setcart([]))
     }
-  }, [])
+  }, [user])
 
   const addtocart = async (product) => {
     if (!user) {
