@@ -12,22 +12,21 @@ export default function Index() {
   const { Order } = useContext(OrderContext);
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   const orderCount = Order.length;
   const wish = wishlist.length;
 
   const handleLogout = () => {
-    const confirm = window.confirm("Are you sure you want to logout?");
-    if (!confirm) return;
-
     logout();
     navigate("/login");
-    setMenuOpen(false); 
+    setShowLogoutModal(false);
+    setMenuOpen(false);
   };
 
   const handleLinkClick = () => {
-    setMenuOpen(false); 
+    setMenuOpen(false);
   };
 
   return (
@@ -61,7 +60,7 @@ export default function Index() {
             {user && user.username ? (
               <>
                 <span className="nav-user">Hi, {user.username}</span>
-                <button className="logout-btn" onClick={handleLogout}>
+                <button className="logout-btn" onClick={() => setShowLogoutModal(true)}>
                   <LogOut size={10} /> Logout
                 </button>
               </>
@@ -73,6 +72,19 @@ export default function Index() {
           </div>
         </div>
       </nav>
+
+      {showLogoutModal && (
+        <div className="modal-overlay">
+          <div className="logout-modal">
+            <h3>Confirm Logout</h3>
+            <p>Are you sure you want to logout?</p>
+            <div className="modal-actions">
+              <button className="cancel-btn" onClick={() => setShowLogoutModal(false)}>Cancel</button>
+              <button className="confirm-btn" onClick={handleLogout}>Logout</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="page-content">
         <Outlet />

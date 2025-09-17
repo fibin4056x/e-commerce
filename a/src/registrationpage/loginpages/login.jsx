@@ -7,36 +7,44 @@ import { Context } from "./Logincontext";
 import { toast } from "react-toastify";
 
 export default function Login() {
-  const [username, setusername] = useState("");
-  const [password, setpassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { setuser } = useContext(Context);
-  const [show, setshow] = useState(false);
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (username === "" || password === "") {
+    if (!email || !password) {
       toast.warning("Please fill in all fields");
+      return;
+    }
+
+    
+    const emailValid = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
+    if (!emailValid) {
+      toast.warning("Please enter a valid email address");
       return;
     }
 
     try {
       const res = await axios.get("http://localhost:3000/user", {
-        params: { username, password },
+        params: { email, password },
       });
 
       if (res.data.length > 0) {
-  
-        localStorage.setItem("user", JSON.stringify(res.data[0]));
-        setusername("");
-        setpassword("");
+        const userData = res.data[0];
+        localStorage.setItem("user", JSON.stringify(userData));
+        setuser(userData);
+        setEmail("");
+        setPassword("");
 
         toast.success("Login successful!");
         navigate("/");
         window.location.reload();
       } else {
-        toast.error("Invalid username or password. Please register.");
+        toast.error("Invalid email or password. Please register.");
       }
     } catch (err) {
       console.error(err);
@@ -45,45 +53,39 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <form className="Login" onSubmit={handleSubmit}>
-        <label className="user">
-          <p>Username</p>
+    <div className="login-page">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2>Login</h2>
+
+        <label className="input-group">
+          <p>Email</p>
           <input
-            type="text"
-            placeholder="Enter username"
-            value={username}
-            onChange={(e) => setusername(e.target.value)}
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
 
-        <p>Password</p>
-        <label className="password">
-          <input
-            type={show ? "text" : "password"}
-            value={password}
-            placeholder="Enter your password"
-            onChange={(e) => setpassword(e.target.value)}
-          />
-          <button
-            className="password"
-            type="button"
-            onClick={() => setshow(!show)}
-          >
-            {show ? <Eye size={14} /> : <EyeOff size={14} />}
-          </button>
-         
+        <label className="input-group">
+          <p>Password</p>
+          <div className="password-wrapper">
+            <input
+              type={show ? "text" : "password"}
+              value={password}
+              placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="button" onClick={() => setShow(!show)}>
+              {show ? <Eye size={18} /> : <EyeOff size={18} />}
+            </button>
+          </div>
         </label>
-        
 
-        <div className="submit">
-          <button type="submit">Login</button>
-          <Link to={"/"} className="back-btn">
-            Back
-          </Link>
-          <Link to={"/Registration"} className="submit-button">
-            Register
-          </Link>
+        <div className="form-actions">
+          <button type="submit" className="submit-btn">Login</button>
+          <Link to="/" className="back-btn">Back</Link>
+          <Link to="/Registration" className="register-btn">Register</Link>
         </div>
       </form>
     </div>

@@ -8,8 +8,9 @@ import { toast } from "react-toastify";
 function Details() {
   const [data, setData] = useState(null);
   const { id } = useParams();
-  const { addtocart, user, cart } = useContext(Context);  
+  const { addtocart, user, cart } = useContext(Context);
   const navigate = useNavigate();
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   useEffect(() => {
     axios
@@ -18,25 +19,28 @@ function Details() {
       .catch((err) => console.log(err));
   }, [id]);
 
-  const handlecart = () => {
-    if (!user) {
-      alert("Please login first");
+  const handleAddToCart = () => {
+    if (!user || !user.id) {
+      setShowLoginModal(true);
       return;
     }
-    addtocart(data);
-    toast.success("Your item added to cart!");
+    const inCart = cart?.some((item) => item.id === data.id);
+    if (!inCart) {
+      addtocart(data);
+      toast.success("Added to cart!");
+    } else {
+      toast.info("Already in cart!");
+    }
   };
 
-  const handle = () => {
-    navigate("/cart");
-  };
+  const goToCart = () => navigate("/cart");
 
   if (!data) return <h2>Loading...</h2>;
 
   const inCart = cart?.some((item) => item.id === data.id);
 
   return (
-    <div className="details cool-details">
+    <div className="details unique-details">
       <div className="details-left">
         <img src={data.images[0]} alt={data.name} className="details-image" />
         {data.images.length > 1 && (
@@ -46,7 +50,7 @@ function Details() {
                 key={index}
                 src={img}
                 alt={`thumb-${index}`}
-                className="details-thumb"
+                className={`details-thumb ${index === 0 ? "active-thumb" : ""}`}
               />
             ))}
           </div>
@@ -58,20 +62,40 @@ function Details() {
         <p className="details-brand">{data.brand}</p>
         <p className="details-price">${data.price}</p>
         {data.discount > 0 && (
-          <p className="details-discount">Discount: {data.discount}% OFF</p>
+          <p className="details-discount">{data.discount}% OFF</p>
         )}
         <p className="details-description">{data.description}</p>
 
-        {inCart ? (
-          <button className="add-to-cart" onClick={handle}>
-            Go to Cart 🛒
-          </button>
-        ) : (
-          <button className="add-to-cart" onClick={handlecart}>
-            Add to Cart 🛒
-          </button>
-        )}
+        <div className="cart-buttons">
+          {inCart ? (
+            <button className="go-cart-btn" onClick={goToCart}>
+              🛒 Go to Cart
+            </button>
+          ) : (
+            <button className="add-cart-btn" onClick={handleAddToCart}>
+              ➕ Add to Cart
+            </button>
+          )}
+        </div>
       </div>
+
+      {/* Login Modal */}
+      {showLoginModal && (
+        <div className="modal-overlay">
+          <div className="login-modal unique-modal">
+            <h3>Login Required</h3>
+            <p>You must login to add items to your cart.</p>
+            <div className="modal-actions">
+              <button className="cancel-btn" onClick={() => setShowLoginModal(false)}>
+                Cancel
+              </button>
+              <button className="confirm-btn" onClick={() => navigate("/login")}>
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

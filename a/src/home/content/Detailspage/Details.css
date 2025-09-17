@@ -1,12 +1,12 @@
-.cool-details {
-  max-width: 850px;
+.unique-details {
+  max-width: 900px;
   margin: 50px auto;
-  padding: 30px;
   display: flex;
-  gap: 40px;
-  background: linear-gradient(135deg, #f0f4ff, #fdf6ff);
+  gap: 50px;
+  padding: 30px;
   border-radius: 25px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  background: linear-gradient(145deg, #fef9f9, #eef6ff);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -19,28 +19,33 @@
 
 .details-image {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   border-radius: 20px;
   object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.details-image:hover {
+  transform: scale(1.02);
 }
 
 .details-thumbnails {
   display: flex;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .details-thumb {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
-  object-fit: cover;
   cursor: pointer;
-  transition: transform 0.2s;
+  border: 2px solid transparent;
+  transition: all 0.2s;
 }
-
-.details-thumb:hover {
+.details-thumb:hover,
+.details-thumb.active-thumb {
+  border-color: #4a90e2;
   transform: scale(1.1);
 }
 
@@ -53,63 +58,149 @@
 
 .details-title {
   font-size: 2rem;
-  font-weight: bold;
   color: #4a90e2;
+  font-weight: 700;
 }
 
 .details-brand {
   font-size: 1rem;
-  font-weight: 500;
   color: #555;
 }
 
 .details-price {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #ff6f61;
 }
 
 .details-discount {
   font-size: 1rem;
-  font-weight: 600;
   color: #28a745;
+  font-weight: 600;
 }
 
 .details-description {
   font-size: 1rem;
-  line-height: 1.5;
   color: #333;
+  line-height: 1.5;
 }
 
-.add-to-cart {
-  padding: 15px 25px;
+
+.cart-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.add-cart-btn, .go-cart-btn {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 12px;
   border: none;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #4a90e2, #50e3c2);
-  color: white;
-  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 20px;
 }
 
-.add-to-cart:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+.add-cart-btn {
+  background: linear-gradient(135deg, #4a90e2, #50e3c2);
+  color: white;
+}
+.add-cart-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.go-cart-btn {
+  background: linear-gradient(135deg, #ff6b6b, #c0392b);
+  color: white;
+}
+.go-cart-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(255,0,0,0.2);
+}
+
+.modal-overlay {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.login-modal.unique-modal {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  border-top: 5px solid #4a90e2;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+.login-modal h3 {
+  color: #4a90e2;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.login-modal p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cancel-btn, .confirm-btn {
+  flex: 1;
+  padding: 7px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background: #ccc;
+  color: #333;
+}
+.cancel-btn:hover {
+  background: #bbb;
+}
+
+.confirm-btn {
+  background: linear-gradient(135deg, #4a90e2, #50e3c2);
+  color: white;
+}
+.confirm-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(-10px);}
+  to {opacity:1; transform: translateY(0);}
+}
+@keyframes slideDown {
+  from {opacity:0; transform: translateY(-20px);}
+  to {opacity:1; transform: translateY(0);}
 }
 
 @media (max-width: 768px) {
-  .cool-details {
+  .unique-details {
     flex-direction: column;
     padding: 20px;
   }
-
-  .details-left, .details-right {
-    width: 100%;
-  }
-
-  .details-thumbnails {
-    justify-content: center;
-  }
+  .details-left, .details-right {width:100%;}
+  .details-thumbnails {justify-content:center;}
 }

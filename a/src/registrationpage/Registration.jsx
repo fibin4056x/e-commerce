@@ -7,47 +7,65 @@ import { toast } from 'react-toastify';
 
 export default function Registration() {
   const [username, setusername] = useState('');
+  const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
+  const [confirmPassword, setconfirmPassword] = useState('');
   const [show, setshow] = useState(false);
+  const [showConfirm, setshowConfirm] = useState(false);
 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
-    if (username === '' || password === '') {
-      toast.warning("please fill the columns");
+    if (!username || !email || !password || !confirmPassword) {
+      toast.warning("Please fill all fields");
       return;
     }
-    if (/^[a-zA-Z]{5,}$/.test(username) && /^\d{6}$/.test(password)) {
+
+    if (password !== confirmPassword) {
+      toast.warning("Passwords do not match");
+      return;
+    }
+
+    // Basic validation
+    const usernameValid = /^[a-zA-Z]{5,}$/.test(username);
+    const emailValid = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
+    const passwordValid = /^\d{6}$/.test(password);
+
+    if (usernameValid && emailValid && passwordValid) {
       try {
         const res = await axios.post('http://localhost:3000/user', {
           username,
+          email,
           password,
         });
 
         console.log(res.data);
 
         setusername('');
+        setemail('');
         setpassword('');
+        setconfirmPassword('');
 
-        toast.warning("Registration successful! Please login.");
+        toast.success("Registration successful! Please login.");
         navigate('/login');
       } catch (err) {
         console.error(err);
-       toast.warning("Something went wrong while registering.");
+        toast.error("Something went wrong while registering.");
       }
     } else {
-      toast.warning("Username must be at least 5 letters and password must be exactly 6 numbers");
+      toast.warning("Username must be at least 5 letters, email must be valid, and password must be exactly 6 numbers");
     }
   };
 
   return (
-    <div>
-      <form className="Login" onSubmit={handleSubmit}>
-        <label className="user">
-          <p>username</p>
+    <div className="registration-page">
+      <form className="registration-form" onSubmit={handleSubmit}>
+        <h2>Create Account</h2>
+
+        <label className="input-group">
+          <p>Username</p>
           <input
             type="text"
             placeholder="Enter username"
@@ -56,26 +74,47 @@ export default function Registration() {
           />
         </label>
 
-        <p>password</p>
-        <label className="password">
+        <label className="input-group">
+          <p>Email</p>
           <input
-            type={show ? "text" : "password"}
-            value={password}
-            placeholder="Enter your password"
-            onChange={(e) => setpassword(e.target.value)}
+            type="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setemail(e.target.value)}
           />
-          <button
-            className="password"
-            type="button"
-            onClick={() => setshow(!show)}
-          >
-            {show ? <Eye size={10} /> : <EyeOff size={10} />}
-          </button>
         </label>
 
-        <div className="submit">
-          <button type="submit">Register</button>
-        </div>
+        <label className="input-group">
+          <p>Password</p>
+          <div className="password-wrapper">
+            <input
+              type={show ? "text" : "password"}
+              value={password}
+              placeholder="Enter 6-digit password"
+              onChange={(e) => setpassword(e.target.value)}
+            />
+            <button type="button" onClick={() => setshow(!show)}>
+              {show ? <Eye size={18} /> : <EyeOff size={18} />}
+            </button>
+          </div>
+        </label>
+
+        <label className="input-group">
+          <p>Confirm Password</p>
+          <div className="password-wrapper">
+            <input
+              type={showConfirm ? "text" : "password"}
+              value={confirmPassword}
+              placeholder="Re-enter password"
+              onChange={(e) => setconfirmPassword(e.target.value)}
+            />
+            <button type="button" onClick={() => setshowConfirm(!showConfirm)}>
+              {showConfirm ? <Eye size={18} /> : <EyeOff size={18} />}
+            </button>
+          </div>
+        </label>
+
+        <button type="submit" className="submit-btn">Register</button>
       </form>
     </div>
   );

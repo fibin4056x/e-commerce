@@ -1,4 +1,4 @@
-/* Navbar Base */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -14,7 +14,6 @@
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
-/* User */
 .nav-user {
   color: #f1f1f1;
   font-weight: 600;
@@ -22,7 +21,6 @@
   text-shadow: 0 0 6px rgba(0,0,0,0.6);
 }
 
-/* Logout Button */
 .logout-btn {
   background: linear-gradient(135deg, #ff4d4f, #ff7676);
   color: #fff;
@@ -58,7 +56,6 @@
 .order-badge { background: #28a745; }
 .wish-badge { background: #ff9800; }
 
-/* Navigation Links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -100,7 +97,6 @@
   text-shadow: 0 0 10px #4cafef;
 }
 
-/* Right Section */
 .nav-right {
   display: flex;
   align-items: center;
@@ -108,7 +104,6 @@
   position: relative;
 }
 
-/* Mobile Toggle */
 .menu-toggle {
   display: none;
   background: none;
@@ -122,7 +117,6 @@
   transform: rotate(90deg) scale(1.1);
 }
 
-/* Mobile Menu */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -140,7 +134,6 @@
     border-radius: 0 0 14px 14px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.35);
 
-    /* animation */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.4s ease;
@@ -171,4 +164,77 @@
     gap: 14px;
     margin-top: 14px;
   }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logout-modal {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.logout-modal h3 {
+  margin-bottom: 10px;
+  color: #ff4b5c;
+}
+
+.logout-modal p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cancel-btn, .confirm-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+}
+
+.confirm-btn {
+  background: linear-gradient(135deg, #ff4b5c, #ff6f61);
+  color: white;
+}
+
+.confirm-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,75,92,0.4);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
 }
