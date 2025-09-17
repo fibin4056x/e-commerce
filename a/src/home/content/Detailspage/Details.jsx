@@ -1,23 +1,21 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { useParams ,useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Details.css";
 import { Context } from "../../../registrationpage/loginpages/Logincontext";
 import { toast } from "react-toastify";
+
 function Details() {
   const [data, setData] = useState(null);
   const { id } = useParams();
-  const { addtocart, user,cart } = useContext(Context);  
-const navigate=useNavigate()
+  const { addtocart, user, cart } = useContext(Context);  
+  const navigate = useNavigate();
+
   useEffect(() => {
     axios
       .get(`http://localhost:3000/products/${id}`)
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
   }, [id]);
 
   const handlecart = () => {
@@ -26,18 +24,19 @@ const navigate=useNavigate()
       return;
     }
     addtocart(data);
-toast.success(" your item added to cart")
+    toast.success("Your item added to cart!");
   };
 
-  if (!data) {
-    return <h2>Loading...</h2>;
-  }
-  const handle=()=>{
-    navigate("/cart")
-  }
+  const handle = () => {
+    navigate("/cart");
+  };
+
+  if (!data) return <h2>Loading...</h2>;
+
   const inCart = cart?.some((item) => item.id === data.id);
+
   return (
-    <div className="details">
+    <div className="details cool-details">
       <div className="details-left">
         <img src={data.images[0]} alt={data.name} className="details-image" />
         {data.images.length > 1 && (
@@ -63,36 +62,15 @@ toast.success(" your item added to cart")
         )}
         <p className="details-description">{data.description}</p>
 
-        <div className="details-sizes">
-          <strong>Sizes: </strong>
-          {data.sizes.map((size, index) => (
-            <button key={index} className="size-btn">
-              {size}
-            </button>
-          ))}
-        </div>
-
-        <div className="details-colors">
-          <strong>Colors: </strong>
-          {data.colors.map((color, index) => (
-            <span
-              key={index}
-              className="color-circle"
-              style={{ backgroundColor: color.toLowerCase() }}
-            ></span>
-          ))}
-        </div>
-    {inCart ? (
-  <button className="add-to-cart" onClick={handle}>
-    Go to Cart 🛒
-  </button>
-) : (
-  <button className="add-to-cart" onClick={handlecart}>
-    Add to Cart 🛒
-  </button>
-)}
-
-       
+        {inCart ? (
+          <button className="add-to-cart" onClick={handle}>
+            Go to Cart 🛒
+          </button>
+        ) : (
+          <button className="add-to-cart" onClick={handlecart}>
+            Add to Cart 🛒
+          </button>
+        )}
       </div>
     </div>
   );

@@ -6,9 +6,9 @@ import { Context } from '../../../registrationpage/loginpages/Logincontext';
 export default function Order() {
   const { user } = useContext(Context);
   const { Order, cancelOrderById, cancelAllOrders } = useContext(OrderContext);
- 
+
   return (
-    <div className="orders-wrapper">
+    <div className="orders-wrapper unique-orders">
       {user ? (
         Order && Order.length > 0 ? (
           <>
@@ -24,7 +24,7 @@ export default function Order() {
                     className="cancel-order-btn"
                     onClick={() => cancelOrderById(order.id)}
                   >
-                    Cancel Order
+                    Cancel
                   </button>
                 </div>
 

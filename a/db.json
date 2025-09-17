@@ -24,6 +24,11 @@
       "id": "38cc",
       "username": "athithyan",
       "password": "123456"
+    },
+    {
+      "id": "d8f0",
+      "username": "badhu",
+      "password": "123456"
     }
   ],
   "products": [
@@ -628,7 +633,40 @@
       "isNewArrival": true
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "1",
+      "name": "Men's Black Running",
+      "brand": "EcoStep",
+      "category": "Men",
+      "type": "Running",
+      "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
+      "price": 89.9,
+      "originalPrice": 104.9,
+      "sizes": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "Black",
+        "Blue"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 50,
+      "rating": 4.5,
+      "reviews": 132,
+      "discount": 15,
+      "isFeatured": true,
+      "isNewArrival": false,
+      "userId": "d8f0",
+      "quantity": 1
+    }
+  ],
   "order": [
     {
       "id": "28c8",
@@ -812,14 +850,137 @@
       "total": 59.9
     },
     {
-      "id": "6986",
+      "id": "f883",
       "contact": "7907238198",
-      "firstname": "fibin",
-      "lastname": "lastname",
-      "address": "g",
+      "firstname": "adithyan",
+      "lastname": "p",
+      "address": "manjeri",
       "city": "malapuram",
-      "postalcode": "583454",
+      "postalcode": "679339",
       "userId": "52fe",
+      "items": [
+        {
+          "id": "10",
+          "name": "Women's Tan Sneaker",
+          "brand": "EcoStep",
+          "category": "Women",
+          "type": "Sneakers",
+          "description": "Elegant sneakers made from high-quality recycled materials.",
+          "price": 80,
+          "originalPrice": 89.9,
+          "sizes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "colors": [
+            "Tan",
+            "Brown"
+          ],
+          "images": [
+            "https://i.pinimg.com/736x/c1/69/42/c16942cec4c038e52648ce4c45a2196f.jpg"
+          ],
+          "stock": 20,
+          "rating": 4.7,
+          "reviews": 310,
+          "discount": 11,
+          "isFeatured": false,
+          "isNewArrival": true,
+          "userId": "52fe",
+          "quantity": 1
+        }
+      ],
+      "total": 80
+    },
+    {
+      "id": "c056",
+      "contact": "7907238198",
+      "firstname": "badhu",
+      "lastname": "ck",
+      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
+      "city": "malapuram",
+      "postalcode": "679339",
+      "userId": "d8f0",
+      "items": [
+        {
+          "id": "2",
+          "name": "Men's Earth-Tone Sneaker",
+          "brand": "EcoStep",
+          "category": "Men",
+          "type": "Sneakers",
+          "description": "Everyday sustainable sneakers with cushioned sole made from recycled foam.",
+          "price": 74.9,
+          "originalPrice": null,
+          "sizes": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "colors": [
+            "Earth-Tone",
+            "Gray"
+          ],
+          "images": [
+            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=400&fit=crop&auto=format"
+          ],
+          "stock": 40,
+          "rating": 4.2,
+          "reviews": 95,
+          "discount": 0,
+          "isFeatured": false,
+          "isNewArrival": true,
+          "userId": "d8f0",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Men's Moonstone Sneaker",
+          "brand": "EcoStep",
+          "category": "Men",
+          "type": "Sneakers",
+          "description": "Comfortable casual sneakers with adjustable fit and eco-friendly materials.",
+          "price": 74.9,
+          "originalPrice": null,
+          "sizes": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "colors": [
+            "Moonstone",
+            "Black"
+          ],
+          "images": [
+            "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop&auto=format"
+          ],
+          "stock": 25,
+          "rating": 4,
+          "reviews": 48,
+          "discount": 0,
+          "isFeatured": false,
+          "isNewArrival": true,
+          "userId": "d8f0",
+          "quantity": 1
+        }
+      ],
+      "total": 149.8
+    },
+    {
+      "id": "86d9",
+      "contact": "7907238198",
+      "firstname": "athithyan",
+      "lastname": "k",
+      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
+      "city": "malapuram",
+      "postalcode": "679339",
+      "userId": "d8f0",
       "items": [
         {
           "id": "8",
@@ -850,7 +1011,7 @@
           "discount": 0,
           "isFeatured": true,
           "isNewArrival": false,
-          "userId": "52fe",
+          "userId": "d8f0",
           "quantity": 1
         }
       ],
@@ -950,6 +1111,131 @@
       "isFeatured": false,
       "isNewArrival": true,
       "userId": "52fe"
+    },
+    {
+      "id": "1",
+      "name": "Men's Black Running",
+      "brand": "EcoStep",
+      "category": "Men",
+      "type": "Running",
+      "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
+      "price": 89.9,
+      "originalPrice": 104.9,
+      "sizes": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "Black",
+        "Blue"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 50,
+      "rating": 4.5,
+      "reviews": 132,
+      "discount": 15,
+      "isFeatured": true,
+      "isNewArrival": false,
+      "userId": "d8f0"
+    },
+    {
+      "id": "2",
+      "name": "Men's Earth-Tone Sneaker",
+      "brand": "EcoStep",
+      "category": "Men",
+      "type": "Sneakers",
+      "description": "Everyday sustainable sneakers with cushioned sole made from recycled foam.",
+      "price": 74.9,
+      "originalPrice": null,
+      "sizes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "Earth-Tone",
+        "Gray"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 40,
+      "rating": 4.2,
+      "reviews": 95,
+      "discount": 0,
+      "isFeatured": false,
+      "isNewArrival": true,
+      "userId": "d8f0"
+    },
+    {
+      "id": "3",
+      "name": "Men's Moonstone Sneaker",
+      "brand": "EcoStep",
+      "category": "Men",
+      "type": "Sneakers",
+      "description": "Comfortable casual sneakers with adjustable fit and eco-friendly materials.",
+      "price": 74.9,
+      "originalPrice": null,
+      "sizes": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "colors": [
+        "Moonstone",
+        "Black"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 25,
+      "rating": 4,
+      "reviews": 48,
+      "discount": 0,
+      "isFeatured": false,
+      "isNewArrival": true,
+      "userId": "d8f0"
+    },
+    {
+      "id": "4",
+      "name": "Men's Green Running",
+      "brand": "EcoStep",
+      "category": "Men",
+      "type": "Running",
+      "description": "High-performance running shoes with extra ankle support and sustainable materials.",
+      "price": 89.9,
+      "originalPrice": 104.9,
+      "sizes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        "Green",
+        "Black"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 30,
+      "rating": 4.3,
+      "reviews": 76,
+      "discount": 15,
+      "isFeatured": true,
+      "isNewArrival": true,
+      "userId": "d8f0"
     }
   ]
 }

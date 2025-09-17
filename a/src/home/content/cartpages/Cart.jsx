@@ -64,7 +64,7 @@ export default function Cart() {
   if (!cart) return <h2>Loading cart...</h2>;
 
   return (
-    <div className="cart-container">
+    <div className="cart-container cool-cart">
       <h1>{user.username}'s Cart 🛒</h1>
 
       {cart.length === 0 ? (
@@ -93,13 +93,12 @@ export default function Cart() {
                       Remove
                     </button>
                   </div>
-                  <p>Total Price: ${item.quantity * item.price}</p>
+               
                 </div>
               </li>
             ))}
           </ul>
 
-    
           <div className="checkout-container">
             <Link to={`order/`} className="checkout-btn">
               Checkout All

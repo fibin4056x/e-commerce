@@ -2,17 +2,19 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
- import { Context as Logincontext } from "../registrationpage/loginpages/Logincontext";
- import { WishlistContext } from "../registrationpage/wishlisht/wishlistcontext";
+import { Context as Logincontext } from "../registrationpage/loginpages/Logincontext";
+import { WishlistContext } from "../registrationpage/wishlisht/wishlistcontext";
 import { Search } from "lucide-react";
 
 export default function Home() {
   const [data, setData] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [searchterm, setSearchTerm] = useState("");
+  const [zoomStyles, setZoomStyles] = useState({}); 
 
   const { user } = useContext(Logincontext);
-  const { wishlist, addToWishlist, removeFromWishlist, fetchWishlist } = useContext(WishlistContext);
+  const { wishlist, addToWishlist, removeFromWishlist, fetchWishlist } =
+    useContext(WishlistContext);
 
   useEffect(() => {
     axios.get("http://localhost:3000/products").then((res) => {
@@ -27,7 +29,7 @@ export default function Home() {
 
   useEffect(() => {
     if (user) {
-      fetchWishlist(); 
+      fetchWishlist();
     }
   }, [user]);
 
@@ -65,28 +67,43 @@ export default function Home() {
 
     const exists = wishlist.some((item) => item.id === product.id);
     if (exists) {
-
       const itemInWishlist = wishlist.find((w) => w.id === product.id);
       removeFromWishlist(itemInWishlist.id);
     } else {
-    
       addToWishlist(product);
     }
   };
 
-  const isInWishlist = (product) => wishlist.some((item) => item.id === product.id);
+  const isInWishlist = (product) =>
+    wishlist.some((item) => item.id === product.id);
+
+  const handleMouseMove = (e, id) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+
+    setZoomStyles((prev) => ({
+      ...prev,
+      [id]: {
+        transform: `scale(2) translate(-${x - 50}%, -${y - 50}%)`,
+        transformOrigin: `${x}% ${y}%`,
+      },
+    }));
+  };
+
+  const resetZoom = (id) => {
+    setZoomStyles((prev) => ({
+      ...prev,
+      [id]: { transform: "scale(1)", transformOrigin: "center center" },
+    }));
+  };
 
   return (
     <div className="home">
       <h1 className="home-title">Welcome Home {user?.username}</h1>
-
-      <img
-        src="https://i.pinimg.com/736x/86/70/5e/86705e31d09fb8218a6fb9b4c3cc9bf6.jpg"
-        alt="shoes"
-        className="home-banner"
-      />
-
-      <p className="home-subtitle">Select Men, Women or Cart from the navbar.</p>
+      <p className="home-subtitle">
+        Select Men, Women or Cart from the navbar.
+      </p>
 
       <div className="controls">
         <div className="search-box">
@@ -101,7 +118,12 @@ export default function Home() {
           </button>
         </div>
 
-        <select name="sort" id="sort" className="sort-dropdown" onChange={handleSort}>
+        <select
+          name="sort"
+          id="sort"
+          className="sort-dropdown"
+          onChange={handleSort}
+        >
           <option value="">Sort By Price</option>
           <option value="lowtohigh">Low to High</option>
           <option value="hightolow">High to Low</option>
@@ -113,14 +135,30 @@ export default function Home() {
           filtered.map((item) => (
             <div key={item.id} className="product-card">
               <button
-                className={`wishlist-button ${isInWishlist(item) ? "active" : ""}`}
+                className={`wishlist-button ${
+                  isInWishlist(item) ? "active" : ""
+                }`}
                 onClick={() => toggleWishlist(item)}
               >
                 {isInWishlist(item) ? "♥" : "♡"}
               </button>
 
-              <Link to={`/product/${item.id}`} className="product-card-link">
-                <img src={item.images[0]} alt={item.name} className="product-image" />
+              <Link
+                to={`/product/${item.id}`}
+                className="product-card-link"
+              >
+                <div
+                  className="product-image-container"
+                  onMouseMove={(e) => handleMouseMove(e, item.id)}
+                  onMouseLeave={() => resetZoom(item.id)}
+                >
+                  <img
+                    src={item.images[0]}
+                    alt={item.name}
+                    className="product-image"
+                    style={zoomStyles[item.id] || {}}
+                  />
+                </div>
                 <h3 className="product-name">{item.name}</h3>
                 <p className="product-brand">{item.brand}</p>
                 <p className="product-price">${item.price}</p>

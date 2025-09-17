@@ -19,6 +19,7 @@ useEffect(() => {
       axios.get(`http://localhost:3000/cart?userId=${user.id}`)
         .then((res) => setcart(res.data))
         .catch(() => setcart([]))
+   
     }
   }, [user])
 

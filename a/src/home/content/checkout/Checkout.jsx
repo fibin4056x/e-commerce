@@ -7,7 +7,16 @@ import { useContext } from "react";
 import { Context } from "../../../registrationpage/loginpages/Logincontext";
 import  {useNavigate} from "react-router-dom"
 export default function Checkout() {
-  const { cart ,user} = useContext(Context);
+  const { cart ,user,setCart} = useContext(Context);
+
+  const  sub=()=>{
+    if(cart){
+      setTimeout(() => {
+     
+        window.location.reload()
+      }, 3000);
+    }
+}
 const navigate=useNavigate()
   const {
     register,
@@ -24,6 +33,7 @@ const navigate=useNavigate()
 
 
   const onSubmit = async (data) => {
+    sub();
     try {
       const orderData = {
         ...data,
@@ -43,7 +53,7 @@ const navigate=useNavigate()
    
       console.log(response.data);
       toast.success("Order placed successfully");
-  
+    
       reset();
         navigate("/")
     } catch (error) {
