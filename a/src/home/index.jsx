@@ -57,6 +57,13 @@ export default function Index() {
           </NavLink>
 
           <div className="nav-right">
+     
+            {user?.role === "admin" && (
+              <NavLink to="/admin" className="nav-link" onClick={handleLinkClick}>
+                <span className="admin-link">Admin</span>
+              </NavLink>
+            )}
+
             {user && user.username ? (
               <>
                 <span className="nav-user">Hi, {user.username}</span>

@@ -100,7 +100,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <h1 className="home-title">Welcome sole society {user?.username}</h1>
+      <h1 className="home-title">Welcome sole society   Mr.{user?.username}</h1>
       <p className="home-subtitle">
         Select Men, Women or Cart from the navbar.
       </p>

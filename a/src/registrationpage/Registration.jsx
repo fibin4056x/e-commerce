@@ -28,7 +28,6 @@ export default function Registration() {
       return;
     }
 
-    // Basic validation
     const usernameValid = /^[a-zA-Z]{5,}$/.test(username);
     const emailValid = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
     const passwordValid = /^\d{6}$/.test(password);

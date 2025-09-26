@@ -4,7 +4,7 @@ import React, { createContext, useEffect, useState } from 'react';
 const Context = createContext();
 
 function Logincontext({ children }) {
-  // Store detailed user info
+
   const [user, setuser] = useState({
     id: null,
     username: '',
@@ -13,7 +13,6 @@ function Logincontext({ children }) {
   });
   const [cart, setcart] = useState([]);
 
-  // Load user from localStorage
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {

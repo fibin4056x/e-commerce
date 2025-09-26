@@ -76,12 +76,12 @@ const navigate=useNavigate()
             {cart.map((item) => (
               <li key={item.id}>
                 <strong>{item.name}</strong> × {item.quantity} ={" "}
-                ₹{item.price * item.quantity}
+                ${item.price * item.quantity}
               </li>
             ))}
           </ul>
         )}
-        <h4>Total: ₹{total}</h4>
+        <h4>Total: ${total}</h4>
       </div>
 
       <form className="checkout-form" onSubmit={handleSubmit(onSubmit)}>

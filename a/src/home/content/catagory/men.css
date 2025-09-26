@@ -49,7 +49,6 @@
   animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Product Card */
 .product-card {
   padding: 16px;
   border-radius: 16px;
@@ -64,7 +63,6 @@
   box-shadow: 0 10px 25px rgba(255,77,109,0.3), 0 0 15px rgba(255,77,109,0.5);
 }
 
-/* Image with hover zoom + tilt */
 .product-image-container {
   position: relative;
   overflow: hidden;
@@ -81,7 +79,6 @@
   transform: scale(1.12) rotate(1deg);
 }
 
-/* Product Details */
 .product-name {
   font-size: 1.2rem;
   margin: 8px 0 4px;
@@ -100,7 +97,6 @@
   text-shadow: 0 0 6px rgba(255,77,109,0.7);
 }
 
-/* Wishlist Button */
 .wishlist-button {
   position: absolute;
   top: 12px;
@@ -125,7 +121,6 @@
   animation: pulse 1.2s infinite;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -136,7 +131,7 @@
   100% { transform: scale(1); }
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
   .men-title { font-size: 2rem; }
   .product-image { height: 200px; }

@@ -79,7 +79,6 @@ function Details() {
         </div>
       </div>
 
-      {/* Login Modal */}
       {showLoginModal && (
         <div className="modal-overlay">
           <div className="login-modal unique-modal">

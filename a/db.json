@@ -4,13 +4,15 @@
       "id": "6155",
       "username": "fibin",
       "email": "fibinkunnath@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "role": "admin"
     },
     {
-      "id": "9b69",
-      "username": "jaizl",
-      "email": "f@gmail.com",
-      "password": "654321"
+      "id": "7d63",
+      "username": "jazil",
+      "email": "j@gmail.com",
+      "password": "123456",
+      "role": "customer"
     }
   ],
   "products": [
@@ -1044,6 +1046,51 @@
         }
       ],
       "total": 74.9
+    },
+    {
+      "id": "4c69",
+      "contact": "7907238198",
+      "firstname": "athithyan",
+      "lastname": "k",
+      "address": "thirrur",
+      "city": "g",
+      "postalcode": "111111",
+      "userId": "6155",
+      "items": [
+        {
+          "id": "8",
+          "name": "Women's Cream Suede",
+          "brand": "EcoStep",
+          "category": "Women",
+          "type": "Casual",
+          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
+          "price": 59.9,
+          "originalPrice": null,
+          "sizes": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "colors": [
+            "Cream",
+            "Tan"
+          ],
+          "images": [
+            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
+          ],
+          "stock": 35,
+          "rating": 4.3,
+          "reviews": 68,
+          "discount": 0,
+          "isFeatured": true,
+          "isNewArrival": false,
+          "userId": "6155",
+          "quantity": 1
+        }
+      ],
+      "total": 59.9
     }
   ],
   "wishlist": [
