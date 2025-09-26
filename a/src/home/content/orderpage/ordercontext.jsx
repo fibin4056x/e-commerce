@@ -34,7 +34,8 @@ export default function OrderProvider({ children }) {
   }, [user]);
 
   const cancelOrderById = async (orderId) => {
-    try {
+   if(!window.confirm)return;{
+       try {
       await axios.delete(`http://localhost:3000/order/${orderId}`);
       setOrder((prev) => prev.filter((o) => o.id !== orderId));
       toast.info('Order cancelled successfully');
@@ -42,6 +43,8 @@ export default function OrderProvider({ children }) {
       console.error('Failed to cancel order:', error);
       toast.error('Failed to cancel order');
     }
+
+   }
   };
 
   const cancelAllOrders = async () => {

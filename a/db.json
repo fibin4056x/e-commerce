@@ -617,480 +617,97 @@
       "isNewArrival": true
     }
   ],
-  "cart": [
-    {
-      "id": "1",
-      "name": "Men's Black Running",
-      "brand": "EcoStep",
-      "category": "Men",
-      "type": "Running",
-      "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
-      "price": 89.9,
-      "originalPrice": 104.9,
-      "sizes": [
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
-      "colors": [
-        "Black",
-        "Blue"
-      ],
-      "images": [
-        "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
-      ],
-      "stock": 50,
-      "rating": 4.5,
-      "reviews": 132,
-      "discount": 15,
-      "isFeatured": true,
-      "isNewArrival": false,
-      "userId": "d8f0",
-      "quantity": 1
-    }
-  ],
+  "cart": [],
   "order": [
     {
-      "id": "28c8",
+      "id": "91e6",
       "contact": "7907238198",
       "firstname": "fibin",
       "lastname": "k",
       "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
-      "city": "malapuram",
+      "city": "r",
       "postalcode": "679339",
-      "userId": "860f",
-      "items": [
-        {
-          "id": "19",
-          "name": "Men's Classic Sneakers",
-          "brand": "Reebok",
-          "category": "Women",
-          "type": "Casual",
-          "description": "High-quality eco-friendly shoes designed for comfort and durability.",
-          "price": 102.14,
-          "originalPrice": 104.13,
-          "sizes": [
-            7,
-            8,
-            9,
-            11,
-            5,
-            6
-          ],
-          "colors": [
-            "Blue",
-            "Black"
-          ],
-          "images": [
-            "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=400&h=400&fit=crop&auto=format"
-          ],
-          "stock": 66,
-          "rating": 3.6,
-          "reviews": 177,
-          "discount": 5,
-          "isFeatured": true,
-          "isNewArrival": false,
-          "userId": "860f",
-          "quantity": 1
-        }
-      ],
-      "total": 102.14
-    },
-    {
-      "id": "213a",
-      "contact": "7907238198",
-      "firstname": "fibin",
-      "lastname": "p",
-      "address": "manjeri",
-      "city": "malapuram",
-      "postalcode": "679339",
-      "userId": "860f",
-      "items": [
-        {
-          "id": "5",
-          "name": "Men's Red Running",
-          "brand": "EcoStep",
-          "category": "Men",
-          "type": "Running",
-          "description": "Premium running shoes made from upcycled materials for urban athletes.",
-          "price": 69.9,
-          "originalPrice": 79.9,
-          "sizes": [
-            8,
-            9,
-            10,
-            11,
-            12
-          ],
-          "colors": [
-            "Red",
-            "Black"
-          ],
-          "images": [
-            "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=400&fit=crop&auto=format"
-          ],
-          "stock": 15,
-          "rating": 4.8,
-          "reviews": 220,
-          "discount": 12,
-          "isFeatured": true,
-          "isNewArrival": false,
-          "userId": "860f",
-          "quantity": 1
-        }
-      ],
-      "total": 69.9
-    },
-    {
-      "id": "5557",
-      "contact": "7907238198",
-      "firstname": "jazil",
-      "lastname": "lastname",
-      "address": "manjeri",
-      "city": "malapuram",
-      "postalcode": "679339",
-      "userId": "cc40",
-      "items": [
-        {
-          "id": "8",
-          "name": "Women's Cream Suede",
-          "brand": "EcoStep",
-          "category": "Women",
-          "type": "Casual",
-          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
-          "price": 59.9,
-          "originalPrice": null,
-          "sizes": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ],
-          "colors": [
-            "Cream",
-            "Tan"
-          ],
-          "images": [
-            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
-          ],
-          "stock": 35,
-          "rating": 4.3,
-          "reviews": 68,
-          "discount": 0,
-          "isFeatured": true,
-          "isNewArrival": false,
-          "userId": "cc40",
-          "quantity": 1
-        }
-      ],
-      "total": 59.9
-    },
-    {
-      "id": "ce3f",
-      "contact": "7907238198",
-      "firstname": "fibin",
-      "lastname": "lastname",
-      "address": "manjeri",
-      "city": "malapuram",
-      "postalcode": "541111",
-      "userId": "cc40",
-      "items": [
-        {
-          "id": "8",
-          "name": "Women's Cream Suede",
-          "brand": "EcoStep",
-          "category": "Women",
-          "type": "Casual",
-          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
-          "price": 59.9,
-          "originalPrice": null,
-          "sizes": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ],
-          "colors": [
-            "Cream",
-            "Tan"
-          ],
-          "images": [
-            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
-          ],
-          "stock": 35,
-          "rating": 4.3,
-          "reviews": 68,
-          "discount": 0,
-          "isFeatured": true,
-          "isNewArrival": false,
-          "userId": "cc40",
-          "quantity": 1
-        }
-      ],
-      "total": 59.9
-    },
-    {
-      "id": "f883",
-      "contact": "7907238198",
-      "firstname": "adithyan",
-      "lastname": "p",
-      "address": "manjeri",
-      "city": "malapuram",
-      "postalcode": "679339",
-      "userId": "52fe",
-      "items": [
-        {
-          "id": "10",
-          "name": "Women's Tan Sneaker",
-          "brand": "EcoStep",
-          "category": "Women",
-          "type": "Sneakers",
-          "description": "Elegant sneakers made from high-quality recycled materials.",
-          "price": 80,
-          "originalPrice": 89.9,
-          "sizes": [
-            5,
-            6,
-            7,
-            8
-          ],
-          "colors": [
-            "Tan",
-            "Brown"
-          ],
-          "images": [
-            "https://i.pinimg.com/736x/c1/69/42/c16942cec4c038e52648ce4c45a2196f.jpg"
-          ],
-          "stock": 20,
-          "rating": 4.7,
-          "reviews": 310,
-          "discount": 11,
-          "isFeatured": false,
-          "isNewArrival": true,
-          "userId": "52fe",
-          "quantity": 1
-        }
-      ],
-      "total": 80
-    },
-    {
-      "id": "c056",
-      "contact": "7907238198",
-      "firstname": "badhu",
-      "lastname": "ck",
-      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
-      "city": "malapuram",
-      "postalcode": "679339",
-      "userId": "d8f0",
-      "items": [
-        {
-          "id": "2",
-          "name": "Men's Earth-Tone Sneaker",
-          "brand": "EcoStep",
-          "category": "Men",
-          "type": "Sneakers",
-          "description": "Everyday sustainable sneakers with cushioned sole made from recycled foam.",
-          "price": 74.9,
-          "originalPrice": null,
-          "sizes": [
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
-          ],
-          "colors": [
-            "Earth-Tone",
-            "Gray"
-          ],
-          "images": [
-            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=400&fit=crop&auto=format"
-          ],
-          "stock": 40,
-          "rating": 4.2,
-          "reviews": 95,
-          "discount": 0,
-          "isFeatured": false,
-          "isNewArrival": true,
-          "userId": "d8f0",
-          "quantity": 1
-        },
-        {
-          "id": "3",
-          "name": "Men's Moonstone Sneaker",
-          "brand": "EcoStep",
-          "category": "Men",
-          "type": "Sneakers",
-          "description": "Comfortable casual sneakers with adjustable fit and eco-friendly materials.",
-          "price": 74.9,
-          "originalPrice": null,
-          "sizes": [
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-          ],
-          "colors": [
-            "Moonstone",
-            "Black"
-          ],
-          "images": [
-            "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop&auto=format"
-          ],
-          "stock": 25,
-          "rating": 4,
-          "reviews": 48,
-          "discount": 0,
-          "isFeatured": false,
-          "isNewArrival": true,
-          "userId": "d8f0",
-          "quantity": 1
-        }
-      ],
-      "total": 149.8
-    },
-    {
-      "id": "86d9",
-      "contact": "7907238198",
-      "firstname": "athithyan",
-      "lastname": "k",
-      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
-      "city": "malapuram",
-      "postalcode": "679339",
-      "userId": "d8f0",
-      "items": [
-        {
-          "id": "8",
-          "name": "Women's Cream Suede",
-          "brand": "EcoStep",
-          "category": "Women",
-          "type": "Casual",
-          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
-          "price": 59.9,
-          "originalPrice": null,
-          "sizes": [
-            5,
-            6,
-            7,
-            8,
-            9
-          ],
-          "colors": [
-            "Cream",
-            "Tan"
-          ],
-          "images": [
-            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
-          ],
-          "stock": 35,
-          "rating": 4.3,
-          "reviews": 68,
-          "discount": 0,
-          "isFeatured": true,
-          "isNewArrival": false,
-          "userId": "d8f0",
-          "quantity": 1
-        }
-      ],
-      "total": 59.9
-    },
-    {
-      "id": "345e",
-      "contact": "7907238198",
-      "firstname": "fibin",
-      "lastname": "g",
-      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
-      "city": "malapuram",
-      "postalcode": "541111",
-      "userId": "9b69",
-      "items": [
-        {
-          "id": "2",
-          "name": "Men's Earth-Tone Sneaker",
-          "brand": "EcoStep",
-          "category": "Men",
-          "type": "Sneakers",
-          "description": "Everyday sustainable sneakers with cushioned sole made from recycled foam.",
-          "price": 74.9,
-          "originalPrice": null,
-          "sizes": [
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
-          ],
-          "colors": [
-            "Earth-Tone",
-            "Gray"
-          ],
-          "images": [
-            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=400&fit=crop&auto=format"
-          ],
-          "stock": 40,
-          "rating": 4.2,
-          "reviews": 95,
-          "discount": 0,
-          "isFeatured": false,
-          "isNewArrival": true,
-          "userId": "9b69",
-          "quantity": 1
-        }
-      ],
-      "total": 74.9
-    },
-    {
-      "id": "4c69",
-      "contact": "7907238198",
-      "firstname": "athithyan",
-      "lastname": "k",
-      "address": "thirrur",
-      "city": "g",
-      "postalcode": "111111",
       "userId": "6155",
       "items": [
         {
-          "id": "8",
-          "name": "Women's Cream Suede",
+          "id": "1",
+          "name": "Men's Black Running",
           "brand": "EcoStep",
-          "category": "Women",
-          "type": "Casual",
-          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
-          "price": 59.9,
-          "originalPrice": null,
+          "category": "Men",
+          "type": "Running",
+          "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
+          "price": 89.9,
+          "originalPrice": 104.9,
           "sizes": [
-            5,
-            6,
             7,
             8,
-            9
+            9,
+            10,
+            11
           ],
           "colors": [
-            "Cream",
-            "Tan"
+            "Black",
+            "Blue"
           ],
           "images": [
-            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
+            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
           ],
-          "stock": 35,
-          "rating": 4.3,
-          "reviews": 68,
-          "discount": 0,
+          "stock": 50,
+          "rating": 4.5,
+          "reviews": 132,
+          "discount": 15,
           "isFeatured": true,
           "isNewArrival": false,
           "userId": "6155",
           "quantity": 1
         }
       ],
-      "total": 59.9
+      "total": 89.9
+    },
+    {
+      "id": "0110",
+      "contact": "7907238198",
+      "firstname": "fibin",
+      "lastname": "k",
+      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
+      "city": "r",
+      "postalcode": "679339",
+      "userId": "7d63",
+      "items": [
+        {
+          "id": "1",
+          "name": "Men's Black Running",
+          "brand": "EcoStep",
+          "category": "Men",
+          "type": "Running",
+          "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
+          "price": 89.9,
+          "originalPrice": 104.9,
+          "sizes": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "colors": [
+            "Black",
+            "Blue"
+          ],
+          "images": [
+            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
+          ],
+          "stock": 50,
+          "rating": 4.5,
+          "reviews": 132,
+          "discount": 15,
+          "isFeatured": true,
+          "isNewArrival": false,
+          "userId": "7d63",
+          "quantity": 1
+        }
+      ],
+      "total": 89.9
     }
   ],
   "wishlist": [
@@ -1311,6 +928,68 @@
       "isFeatured": true,
       "isNewArrival": false,
       "userId": "9b69"
+    },
+    {
+      "id": "14",
+      "name": "Women's Candy City Run",
+      "brand": "EcoStep",
+      "category": "Women",
+      "type": "Running",
+      "description": "Urban running shoes designed for city adventures with recycled materials.",
+      "price": 40,
+      "originalPrice": 54.9,
+      "sizes": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        "Pink",
+        "Purple"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 30,
+      "rating": 4.4,
+      "reviews": 92,
+      "discount": 27,
+      "isFeatured": true,
+      "isNewArrival": true,
+      "userId": "7d63"
+    },
+    {
+      "id": "7",
+      "name": "Women's Orange Sneaker",
+      "brand": "EcoStep",
+      "category": "Women",
+      "type": "Sneakers",
+      "description": "Chic and comfortable sneakers made from organic cotton and recycled materials.",
+      "price": 44.9,
+      "originalPrice": null,
+      "sizes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "colors": [
+        "Orange",
+        "Black"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=400&fit=crop&auto=format"
+      ],
+      "stock": 45,
+      "rating": 4.4,
+      "reviews": 90,
+      "discount": 0,
+      "isFeatured": true,
+      "isNewArrival": false,
+      "userId": "7d63"
     }
   ]
 }

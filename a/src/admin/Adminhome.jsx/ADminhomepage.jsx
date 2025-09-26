@@ -19,10 +19,11 @@ function AdminHomepage() {
           <p>Delete or update products from your catalog.</p>
         </Link>
 
-        <Link to="/order" className="admin-card">
-          <h2>Manage Orders</h2>
-          <p>View and process customer orders.</p>
-        </Link>
+      <Link to="/orderpage" className="admin-card">
+  <h2>Manage Orders</h2>
+  <p>View and process customer orders.</p>
+</Link>
+
 
         <Link to="/users" className="admin-card">
           <h2>Manage Users</h2>

@@ -91,11 +91,18 @@
 
 @media (max-width: 768px) {
   .wishlist-container {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .wishlist-card {
-    width: 90%;
+    width: calc(50% - 15px);
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-card {
+    width: 100%; 
   }
 }
