@@ -102,7 +102,7 @@ export default function Home() {
     <div className="home">
       <h1 className="home-title">Welcome sole society   Mr.{user?.username}</h1>
       <p className="home-subtitle">
-        Select Men, Women or Cart from the navbar.
+        Discover the latest trends in footwear. Step up your style with our exclusive shoe collection!
       </p>
 
       <div className="controls">

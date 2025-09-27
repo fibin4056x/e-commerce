@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AddProduct.css";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export default function AddProduct() {
   const navigate = useNavigate();
@@ -50,11 +51,11 @@ export default function AddProduct() {
     try {
       const res = await axios.post("http://localhost:3000/products", productToAdd);
       console.log("✅ Product added:", res.data);
-      alert("Product added successfully!");
+      toast.info("Product added successfully!");
       navigate("/"); 
     } catch (error) {
       console.error("❌ Error adding product:", error);
-      alert("Failed to add product. Please try again.");
+      toast.warning("Failed to add product. Please try again.");
     }
   }
 

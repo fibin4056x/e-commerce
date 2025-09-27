@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import "./RemoveProduct.css"; 
+import "./RemoveProduct.css";
 
 export default function RemoveProduct() {
   const [products, setProducts] = useState([]);
+  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     fetchProducts();
@@ -20,17 +22,29 @@ export default function RemoveProduct() {
     }
   };
 
-  const handleDelete = async (id) => {
-    if (!window.confirm("Are you sure you want to delete this product?")) return;
+  const openConfirm = (product) => {
+    setSelectedProduct(product);
+    setConfirmOpen(true);
+  };
+
+  const handleDelete = async () => {
+    if (!selectedProduct) return;
 
     try {
-      await axios.delete(`http://localhost:3000/products/${id}`);
-      toast.success("Product removed successfully");
-      setProducts(products.filter((p) => p.id !== id));
+      await axios.delete(`http://localhost:3000/products/${selectedProduct.id}`);
+      toast.success(`"${selectedProduct.name}" removed successfully`);
+      setProducts(products.filter((p) => p.id !== selectedProduct.id));
+      setConfirmOpen(false);
+      setSelectedProduct(null);
     } catch (err) {
       console.error(err);
       toast.error("Failed to remove product");
     }
+  };
+
+  const handleCancel = () => {
+    setConfirmOpen(false);
+    setSelectedProduct(null);
   };
 
   return (
@@ -45,7 +59,7 @@ export default function RemoveProduct() {
               <span className="product-name">{product.name}</span>
               <span className="product-price">₹{product.price}</span>
               <button
-                onClick={() => handleDelete(product.id)}
+                onClick={() => openConfirm(product)}
                 className="delete-btn"
               >
                 Delete
@@ -53,6 +67,20 @@ export default function RemoveProduct() {
             </li>
           ))}
         </ul>
+      )}
+
+      {/* Modal style similar to navbar logout modal */}
+      {confirmOpen && (
+        <div className="modal-overlay">
+          <div className="logout-modal">
+            <h3>Delete Product</h3>
+            <p>Are you sure you want to delete <strong>{selectedProduct.name}</strong>?</p>
+            <div className="modal-actions">
+              <button className="cancel-btn" onClick={handleCancel}>Cancel</button>
+              <button className="confirm-btn" onClick={handleDelete}>Delete</button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

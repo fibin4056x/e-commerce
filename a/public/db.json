@@ -13,6 +13,13 @@
       "email": "j@gmail.com",
       "password": "123456",
       "role": "customer"
+    },
+    {
+      "id": "2dce",
+      "username": "adithyan",
+      "email": "a@gmail.com",
+      "password": "123456",
+      "role": "customer"
     }
   ],
   "products": [
@@ -615,99 +622,96 @@
       "discount": 12,
       "isFeatured": false,
       "isNewArrival": true
+    },
+    {
+      "id": "1758884039266",
+      "name": "Nike Air Jordan 1",
+      "brand": "Nike",
+      "category": "Men",
+      "type": "High-top sneaker",
+      "description": "This is the Nike Air Max 97 “Silver Bullet”, a classic running shoe originally released in 1997. It features a sleek, reflective silver upper with signature wavy lines inspired by Japanese bullet trains. The full-length Air Max cushioning provides superior comfort, while the durable rubber outsole ensures reliable traction. Iconic and stylish, it’s both a collector’s item and a versatile sneaker for everyday wear",
+      "price": 150,
+      "originalPrice": null,
+      "sizes": [],
+      "colors": [],
+      "images": [
+        "https://i.pinimg.com/1200x/35/36/30/353630b0f03aab8bea509d99d8ec133a.jpg"
+      ],
+      "stock": 6,
+      "rating": 0,
+      "reviews": 0,
+      "discount": 0,
+      "isFeatured": false,
+      "isNewArrival": true
+    },
+    {
+      "id": "1758946553066",
+      "name": "adidas shoes",
+      "brand": "adidas",
+      "category": "men",
+      "type": "shoes",
+      "description": "p,ominuytrewq",
+      "price": 222,
+      "originalPrice": null,
+      "sizes": [],
+      "colors": [],
+      "images": [
+        "https://i.pinimg.com/1200x/3e/75/f2/3e75f2aaccae5529c205857dd9624dd2.jpg"
+      ],
+      "stock": 65,
+      "rating": 0,
+      "reviews": 0,
+      "discount": 0,
+      "isFeatured": false,
+      "isNewArrival": true
     }
   ],
   "cart": [],
   "order": [
     {
-      "id": "91e6",
+      "id": "8d85",
       "contact": "7907238198",
       "firstname": "fibin",
       "lastname": "k",
       "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
-      "city": "r",
+      "city": "a",
       "postalcode": "679339",
       "userId": "6155",
       "items": [
         {
-          "id": "1",
-          "name": "Men's Black Running",
+          "id": "8",
+          "name": "Women's Cream Suede",
           "brand": "EcoStep",
-          "category": "Men",
-          "type": "Running",
-          "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
-          "price": 89.9,
-          "originalPrice": 104.9,
+          "category": "Women",
+          "type": "Casual",
+          "description": "Stylish sustainable suede shoes perfect for everyday wear.",
+          "price": 59.9,
+          "originalPrice": null,
           "sizes": [
+            5,
+            6,
             7,
             8,
-            9,
-            10,
-            11
+            9
           ],
           "colors": [
-            "Black",
-            "Blue"
+            "Cream",
+            "Tan"
           ],
           "images": [
-            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
+            "https://i.pinimg.com/1200x/94/57/cb/9457cbf152d08dd281b5729f0501427f.jpg"
           ],
-          "stock": 50,
-          "rating": 4.5,
-          "reviews": 132,
-          "discount": 15,
+          "stock": 35,
+          "rating": 4.3,
+          "reviews": 68,
+          "discount": 0,
           "isFeatured": true,
           "isNewArrival": false,
           "userId": "6155",
           "quantity": 1
         }
       ],
-      "total": 89.9
-    },
-    {
-      "id": "0110",
-      "contact": "7907238198",
-      "firstname": "fibin",
-      "lastname": "k",
-      "address": "Cherukode (near Wandoor), Nilambur Taluk, Malappuram, Kerala – 679339",
-      "city": "r",
-      "postalcode": "679339",
-      "userId": "7d63",
-      "items": [
-        {
-          "id": "1",
-          "name": "Men's Black Running",
-          "brand": "EcoStep",
-          "category": "Men",
-          "type": "Running",
-          "description": "Sustainable running shoes made from recycled materials with breathable mesh upper.",
-          "price": 89.9,
-          "originalPrice": 104.9,
-          "sizes": [
-            7,
-            8,
-            9,
-            10,
-            11
-          ],
-          "colors": [
-            "Black",
-            "Blue"
-          ],
-          "images": [
-            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format"
-          ],
-          "stock": 50,
-          "rating": 4.5,
-          "reviews": 132,
-          "discount": 15,
-          "isFeatured": true,
-          "isNewArrival": false,
-          "userId": "7d63",
-          "quantity": 1
-        }
-      ],
-      "total": 89.9
+      "total": 59.9
     }
   ],
   "wishlist": [
@@ -928,68 +932,6 @@
       "isFeatured": true,
       "isNewArrival": false,
       "userId": "9b69"
-    },
-    {
-      "id": "14",
-      "name": "Women's Candy City Run",
-      "brand": "EcoStep",
-      "category": "Women",
-      "type": "Running",
-      "description": "Urban running shoes designed for city adventures with recycled materials.",
-      "price": 40,
-      "originalPrice": 54.9,
-      "sizes": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "Pink",
-        "Purple"
-      ],
-      "images": [
-        "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop&auto=format"
-      ],
-      "stock": 30,
-      "rating": 4.4,
-      "reviews": 92,
-      "discount": 27,
-      "isFeatured": true,
-      "isNewArrival": true,
-      "userId": "7d63"
-    },
-    {
-      "id": "7",
-      "name": "Women's Orange Sneaker",
-      "brand": "EcoStep",
-      "category": "Women",
-      "type": "Sneakers",
-      "description": "Chic and comfortable sneakers made from organic cotton and recycled materials.",
-      "price": 44.9,
-      "originalPrice": null,
-      "sizes": [
-        5,
-        6,
-        7,
-        8
-      ],
-      "colors": [
-        "Orange",
-        "Black"
-      ],
-      "images": [
-        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=400&fit=crop&auto=format"
-      ],
-      "stock": 45,
-      "rating": 4.4,
-      "reviews": 90,
-      "discount": 0,
-      "isFeatured": true,
-      "isNewArrival": false,
-      "userId": "7d63"
     }
   ]
 }
