@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Index from "./home"; 
-import Login from "./registrationpage/loginpages/Login";
+import Login from "./registrationpage/loginpages/login";
 import Registration from "./registrationpage/Registration";
 import Home from "./home/Home";
 import Men from "./home/content/catagory/Men";

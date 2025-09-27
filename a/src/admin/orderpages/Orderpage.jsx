@@ -4,6 +4,7 @@ import { Context } from "../../registrationpage/loginpages/Logincontext";
 import { toast } from "react-toastify";
 import "./Orderpage.css";
 
+
 export default function Orderpage() {
   const { user } = useContext(Context);
   const [orders, setOrders] = useState([]);
@@ -17,7 +18,7 @@ export default function Orderpage() {
       try {
         let res;
         if (user.role?.toLowerCase() === "admin") {
-          res = await axios.get("http://localhost:3000/order");
+          res = await axios.get("db.json");
         } else {
           res = await axios.get(`http://localhost:3000/order?userId=${user.id}`);
         }

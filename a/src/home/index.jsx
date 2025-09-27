@@ -59,17 +59,17 @@ export default function Index() {
             <Link to="/login" className="login-btn" onClick={handleLinkClick}>
               <LogIn size={16} /> Login
             </Link>
-          ):(
-          <span>Hi, </span>
+          ) : (
+            <span>Hi, {user.username}</span>
           )}
+          
           {user && user.role === "admin" && (
             <button className="logout-btn" onClick={handleLogout}>
               <LogOut size={16} /> Logout
             </button>
           )}
-          {user && user.role !== "admin" && (
-            <span className="nav-user">{user.username}</span>
-          )}
+          
+       
         </div>
       </nav>
 
