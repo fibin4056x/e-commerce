@@ -20,6 +20,7 @@ import Orderpage from "./admin/orderpages/Orderpage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Context } from "./registrationpage/loginpages/Logincontext";
+import Userdetails from "./home/content/Userdetails/Userdetails";
 
 function App() {
   const { user } = useContext(Context);
@@ -36,7 +37,7 @@ function App() {
           <Route path="cart/order" element={<Checkout />} />
           <Route path="order" element={<Order />} />
           <Route path="wishlist" element={<Wishlist />} />
-
+           <Route path="userdetails"element={<Userdetails/>}/>
        
           <Route
             path="admin"

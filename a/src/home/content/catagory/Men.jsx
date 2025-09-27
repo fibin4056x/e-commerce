@@ -9,6 +9,7 @@ export default function Men() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const { user } = useContext(Logincontext);
   const { wishlist, addToWishlist, removeFromWishlist, fetchWishlist } = useContext(WishlistContext);
+  const [zoomStyles, setZoomStyles] = useState({}); 
 
   useEffect(() => {
     axios.get('http://localhost:3000/products')
@@ -50,9 +51,30 @@ export default function Men() {
 
   const isInWishlist = (product) => wishlist.some((item) => item.id === product.id);
 
+  const handleMouseMove = (e, id) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+
+    setZoomStyles((prev) => ({
+      ...prev,
+      [id]: {
+        transform: `scale(1.15) translate(-${x - 50}%, -${y - 50}%)`,
+        transformOrigin: `${x}% ${y}%`,
+      },
+    }));
+  };
+
+  const resetZoom = (id) => {
+    setZoomStyles((prev) => ({
+      ...prev,
+      [id]: { transform: "scale(1)", transformOrigin: "center center" },
+    }));
+  };
+
   return (
     <div className="men-container">
-      <h2 className="men-title">Men Products</h2>
+      <h2 className="men-title">Men's Collection</h2>
 
       <div className="controls">
         <select name="sort" id="sort" className="sort-dropdown" onChange={handleSort}>
@@ -63,7 +85,7 @@ export default function Men() {
       </div>
 
       {filteredProducts.length === 0 ? (
-        <p className="no-products">No products</p>
+        <p className="no-products">No products found</p>
       ) : (
         <div className="men-grid">
           {filteredProducts.map((item) => (
@@ -76,11 +98,16 @@ export default function Men() {
               </button>
 
               <Link to={`/product/${item.id}`} className="product-card-link">
-                <div className="product-image-container">
+                <div
+                  className="product-image-container"
+                  onMouseMove={(e) => handleMouseMove(e, item.id)}
+                  onMouseLeave={() => resetZoom(item.id)}
+                >
                   <img
                     src={item.images?.[0] || 'placeholder.jpg'}
                     alt={item.name}
                     className="product-image"
+                    style={zoomStyles[item.id] || {}}
                   />
                 </div>
                 <h3 className="product-name">{item.name}</h3>
